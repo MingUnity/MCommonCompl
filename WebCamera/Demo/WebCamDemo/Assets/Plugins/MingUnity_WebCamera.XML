@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>MingUniCamera</name>
+        <name>MingUnity_WebCamera</name>
     </assembly>
     <members>
         <member name="T:MingUnity.WebCamera.UniWebCamera">

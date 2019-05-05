@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("MingUniCamera")]
+[assembly: AssemblyTitle("MingUnity_AI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("MingUniCamera")]
+[assembly: AssemblyProduct("MingUnity_AI")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("7fa921c3-b281-4d5e-9087-d8624e947676")]
+[assembly: Guid("8317835c-e402-4383-91ef-995e54781e4e")]
 
 // 程序集的版本信息由下列四个值组成: 
 //
