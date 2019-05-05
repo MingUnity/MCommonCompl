@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MingUniCamera</name>
+    </assembly>
+    <members>
+        <member name="T:MingUnity.WebCamera.UniWebCamera">
+            <summary>
+            网络摄像头
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.Index">
+            <summary>
+            索引
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.IsValid">
+            <summary>
+            有效性
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.IsFrontFacing">
+            <summary>
+            前置摄像头标识
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.CamTexture">
+            <summary>
+            摄像头纹理
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.Width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.Height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.FPS">
+            <summary>
+            FPS
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.IsPlaying">
+            <summary>
+            摄像头开启标识
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Open(System.Int32,System.Int32,System.Boolean,System.Single)">
+            <summary>
+            打开
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Close">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.ReConnect(System.Int32,System.Int32,System.Single)">
+            <summary>
+            重连
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Snapshot(System.Action{UnityEngine.Texture2D})">
+            <summary>
+            摄像头快照
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Snapshot(System.Action{UnityEngine.Color[]})">
+            <summary>
+            摄像头快照
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Snapshot(System.Action{UnityEngine.Color32[]})">
+            <summary>
+            摄像头快照
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.TryGetValue``1(``0[],System.Int32,``0@)">
+            <summary>
+            从数组中获取值
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.IndexValid(System.Array,System.Int32)">
+            <summary>
+            数组取值有效性
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.GetDevice">
+            <summary>
+            获取设备
+            </summary>
+        </member>
+        <member name="F:MingUnity.WebCamera.UniWebCamera._webCamDic">
+            <summary>
+            网络摄像头列表
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Initialize(System.Action{System.Boolean})">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.Count">
+            <summary>
+            网络摄像头数目
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Get(System.Int32)">
+            <summary>
+            获取网络摄像头
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.Get(System.String)">
+            <summary>
+            获取网络摄像头
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.GetFrontFacing">
+            <summary>
+            获取前置网络摄像头
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.UniWebCamera.AuthorizeRequest(System.Action{System.Boolean})">
+            <summary>
+            请求授权
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.Task.Running">
+            Returns true if and only if the coroutine is running.  Paused tasks  
+            are considered to be running.  
+        </member>
+        <member name="P:MingUnity.WebCamera.Task.Paused">
+            Returns true if and only if the coroutine is currently paused.  
+        </member>
+        <member name="T:MingUnity.WebCamera.Task.FinishedHandler">
+            Delegate for termination subscribers.  manual is true if and only if  
+            the coroutine was stopped with an explicit call to Stop().  
+        </member>
+        <member name="E:MingUnity.WebCamera.Task.Finished">
+            Termination event.  Triggered when the coroutine completes execution.  
+        </member>
+        <member name="M:MingUnity.WebCamera.Task.#ctor(System.Collections.IEnumerator,System.Boolean)">
+            Creates a new Task object for the given coroutine.  
+             
+            If autoStart is true (default) the task is automatically started  
+            upon construction.  
+        </member>
+        <member name="M:MingUnity.WebCamera.Task.Start">
+            Begins execution of the coroutine  
+        </member>
+        <member name="M:MingUnity.WebCamera.Task.Stop">
+            Discontinues execution of the coroutine at its next yield.  
+        </member>
+        <member name="T:MingUnity.WebCamera.TaskQueue">
+            <summary>
+            任务队列
+            在某个时间点最多只有一个协程在执行，先加入队列中的先执行，后加入的后执行
+            </summary>
+        </member>
+    </members>
+</doc>
