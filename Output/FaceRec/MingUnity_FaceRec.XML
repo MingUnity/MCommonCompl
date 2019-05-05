@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MingUnity_FaceRec</name>
+    </assembly>
+    <members>
+        <member name="T:MingUnity.FaceRec.FaceDetect">
+            <summary>
+            人脸识别处理
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.Detect(System.String)">
+            <summary>
+            人脸检测
+            </summary>
+            <param name="imagePath">本地图片地址</param>        
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.Detect(UnityEngine.Texture2D)">
+            <summary>
+            人脸检测
+            </summary>
+            <param name="texture">图片Texture</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.Detect(System.Byte[])">
+            <summary>
+            人脸检测
+            </summary>
+            <param name="imageBytes">图片byte数组</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.AsyncDetect(System.String,System.Action{MingUnity.FaceRec.FaceDetectRes})">
+            <summary>
+            异步人脸检测
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.AsyncDetect(System.Byte[],System.Action{MingUnity.FaceRec.FaceDetectRes})">
+            <summary>
+            异步人脸检测
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceRecBase">
+            <summary>
+            人脸识别基类
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceRecBase._faceClient">
+            <summary>
+            人脸服务
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceAppData">
+            <summary>
+            人脸识别应用数据
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceAppData.appId">
+            <summary>
+            app id
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceAppData.apiKey">
+            <summary>
+            api key 
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceAppData.secretKey">
+            <summary>
+            secret key
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceUserData">
+            <summary>
+            人脸识别用户数据
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceUserData.groupId">
+            <summary>
+            用户组
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceUserData.userId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceUserData.userInfo">
+            <summary>
+            用户资料
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceDetectRes">
+            <summary>
+            人脸检测结果
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceDetectRes.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.face_num">
+            <summary>
+            人脸数量
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.face_list">
+            <summary>
+            人脸数据列表
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceDetectRes.Result.Face">
+            <summary>
+            人脸数据
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.face_token">
+            <summary>
+            人脸图片的唯一标识
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.location">
+            <summary>
+            人脸区域
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.face_probability">
+            <summary>
+            人脸置信度
+            范围[0,1]，代表这是一张人脸的概率，0最小、1最大
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.angle">
+            <summary>
+            三维旋转
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.age">
+            <summary>
+            年龄
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.beauty">
+            <summary>
+            美丑打分
+            范围[0,100]，越大表示越美
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.quality">
+            <summary>
+            人脸质量
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.landmark">
+            <summary>
+            特征点
+            左眼中心、右眼中心、鼻尖、嘴中心
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.landmark72">
+            <summary>
+            72个特征点
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceDetectRes.Result.Face.Location">
+            <summary>
+            区域信息
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Location.left">
+            <summary>
+            左
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Location.top">
+            <summary>
+            上
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Location.width">
+            <summary>
+            宽
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Location.height">
+            <summary>
+            高
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Location.rotation">
+            <summary>
+            旋转
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceDetectRes.Result.Face.Angle">
+            <summary>
+            三维旋转
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Angle.yaw">
+            <summary>
+            左右旋转角[-90(左), 90(右)]
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Angle.pitch">
+            <summary>
+            俯仰角度[-90(上), 90(下)]
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Angle.roll">
+            <summary>
+            平面内旋转角[-180(逆时针), 180(顺时针)]
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality">
+            <summary>
+            质量
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.occlusion">
+            <summary>
+            遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.blur">
+            <summary>
+            人脸模糊程度
+            范围[0,1]，0表示清晰，1表示模糊
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.illumination">
+            <summary>
+            脸部区域光照程度
+            范围[0,255],越大表示光照越好
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.completeness">
+            <summary>
+            人脸完整度
+            0或1, 0为人脸溢出图像边界，1为人脸都在图像边界内
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion">
+            <summary>
+            遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion.left_eye">
+            <summary>
+            左眼遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion.right_eye">
+            <summary>
+            右眼遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion.nose">
+            <summary>
+            鼻子遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion.mouth">
+            <summary>
+            嘴巴遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion.left_cheek">
+            <summary>
+            左脸颊遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion.right_cheek">
+            <summary>
+            右脸颊遮挡比例
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceDetectRes.Result.Face.Quality.Occlusion.chin_contour">
+            <summary>
+            下巴遮挡比例
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceResBase">
+            <summary>
+            人脸识别结果
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceResBase.error_code">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceResBase.error_msg">
+            <summary>
+            错误信息
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceResBase.log_id">
+            <summary>
+            日志Id
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceResBase.timestamp">
+            <summary>
+            时间戳
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceResBase.cached">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceCompare">
+            <summary>
+            人脸对比
+            </summary>
+        </member>
+    </members>
+</doc>

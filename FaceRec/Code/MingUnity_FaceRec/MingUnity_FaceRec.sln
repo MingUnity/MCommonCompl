@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MingUnity_AI", "MingUnity_AI\MingUnity_AI.csproj", "{8317835C-E402-4383-91EF-995E54781E4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MingUnity_FaceRec", "MingUnity_FaceRec\MingUnity_FaceRec.csproj", "{13EB1AE8-C4EA-42D9-B6F2-895DF91F4D76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8317835C-E402-4383-91EF-995E54781E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8317835C-E402-4383-91EF-995E54781E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8317835C-E402-4383-91EF-995E54781E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8317835C-E402-4383-91EF-995E54781E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13EB1AE8-C4EA-42D9-B6F2-895DF91F4D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13EB1AE8-C4EA-42D9-B6F2-895DF91F4D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13EB1AE8-C4EA-42D9-B6F2-895DF91F4D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13EB1AE8-C4EA-42D9-B6F2-895DF91F4D76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
