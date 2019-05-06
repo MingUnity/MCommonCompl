@@ -37,6 +37,16 @@
             异步人脸检测
             </summary>
         </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.AsyncDetect(UnityEngine.Color32[],System.Int32,System.Int32,System.Action{MingUnity.FaceRec.FaceDetectRes})">
+            <summary>
+            异步人脸检测
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.Color32ArrayToImageBuffer(UnityEngine.Color32[],System.Int32,System.Int32)">
+            <summary>
+            像素点色值数组转图片二进制数据
+            </summary>
+        </member>
         <member name="T:MingUnity.FaceRec.FaceRecBase">
             <summary>
             人脸识别基类
@@ -45,6 +55,44 @@
         <member name="F:MingUnity.FaceRec.FaceRecBase._faceClient">
             <summary>
             人脸服务
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.IFaceDetect">
+            <summary>
+            人脸检测接口
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceDetect.Detect(System.String)">
+            <summary>
+            检测
+            </summary>
+            <param name="imagePath">图片本地路径</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceDetect.Detect(UnityEngine.Texture2D)">
+            <summary>
+            检测
+            </summary>
+            <param name="texture">图片纹理</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceDetect.Detect(System.Byte[])">
+            <summary>
+            检测
+            </summary>
+            <param name="imageBytes">图片源数据</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceDetect.AsyncDetect(System.String,System.Action{MingUnity.FaceRec.FaceDetectRes})">
+            <summary>
+            异步检测
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceDetect.AsyncDetect(System.Byte[],System.Action{MingUnity.FaceRec.FaceDetectRes})">
+            <summary>
+            异步检测
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceDetect.AsyncDetect(UnityEngine.Color32[],System.Int32,System.Int32,System.Action{MingUnity.FaceRec.FaceDetectRes})">
+            <summary>
+            异步检测
             </summary>
         </member>
         <member name="T:MingUnity.FaceRec.FaceAppData">

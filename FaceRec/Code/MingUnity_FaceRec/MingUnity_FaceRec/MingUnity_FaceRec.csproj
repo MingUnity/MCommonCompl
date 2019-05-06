@@ -47,6 +47,7 @@
     <Reference Include="System.Core">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq">
       <Private>False</Private>
     </Reference>
@@ -68,13 +69,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Src\Core\FaceDetect.cs" />
     <Compile Include="Src\Core\FaceRecBase.cs" />
+    <Compile Include="Src\Core\IFaceDetect.cs" />
     <Compile Include="Src\Data\FaceAppData.cs" />
     <Compile Include="Src\Data\FaceUserData.cs" />
     <Compile Include="Src\Data\Result\FaceDetectRes.cs" />
     <Compile Include="Src\Data\Result\FaceResBase.cs" />
     <Compile Include="Src\Core\FaceCompare.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Src\Core\Interface\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

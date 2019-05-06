@@ -4,13 +4,15 @@ using UnityEngine;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using System.Threading;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace MingUnity.FaceRec
 {
     /// <summary>
     /// 人脸识别处理
     /// </summary>
-    public class FaceDetect : FaceRecBase
+    public sealed class FaceDetect : FaceRecBase, IFaceDetect
     {
         public FaceDetect(FaceAppData appData) : base(appData)
         {
@@ -82,6 +84,7 @@ namespace MingUnity.FaceRec
             {
                 Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:FaceRec Func:Detect Info:{0}", e);
             }
+
             return faceDetectRes;
         }
 
@@ -92,10 +95,7 @@ namespace MingUnity.FaceRec
         {
             ThreadPool.QueueUserWorkItem((state) =>
             {
-                if (callback != null)
-                {
-                    callback.Invoke(Detect(imagePath));
-                }
+                callback?.Invoke(Detect(imagePath));
             });
         }
 
@@ -106,11 +106,63 @@ namespace MingUnity.FaceRec
         {
             ThreadPool.QueueUserWorkItem((state) =>
             {
-                if (callback != null)
-                {
-                    callback.Invoke(Detect(imageBytes));
-                }
+                callback?.Invoke(Detect(imageBytes));
             });
+        }
+
+        /// <summary>
+        /// 异步人脸检测
+        /// </summary>
+        public void AsyncDetect(Color32[] colors, int width, int height, Action<FaceDetectRes> callback)
+        {
+            ThreadPool.QueueUserWorkItem((state) =>
+            {
+                callback?.Invoke(Detect(Color32ArrayToImageBuffer(colors, width, height)));
+            });
+        }
+
+        /// <summary>
+        /// 像素点色值数组转图片二进制数据
+        /// </summary>
+        private byte[] Color32ArrayToImageBuffer(Color32[] colors, int width, int height)
+        {
+            byte[] result = null;
+
+            try
+            {
+                if (colors != null && colors.Length == width * height)
+                {
+                    using (Bitmap bitmap = new Bitmap(width, height))
+                    {
+                        for (int x = 0; x < width; x++)
+                        {
+                            for (int y = 0; y < height; y++)
+                            {
+                                Color32 pixelClr = colors[x + width * y];
+
+                                bitmap.SetPixel(x, height - 1 - y, System.Drawing.Color.FromArgb(pixelClr.a, pixelClr.r, pixelClr.g, pixelClr.b));
+                            }
+                        }
+
+                        using (MemoryStream stream = new MemoryStream())
+                        {
+                            bitmap.Save(stream, ImageFormat.Jpeg);
+
+                            stream.Seek(0, SeekOrigin.Begin);
+
+                            result = stream.GetBuffer();
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                result = null;
+
+                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:FaceDetect Func:Color32ArrayToImageBuffer Info:{0}", e);
+            }
+
+            return result;
         }
     }
 }

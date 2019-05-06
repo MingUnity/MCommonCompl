@@ -16,7 +16,7 @@ namespace MingUnity.FaceRec
         /// <summary>
         /// 结果
         /// </summary>
-        public struct Result
+        public class Result
         {
             /// <summary>
             /// 人脸数量
@@ -31,7 +31,7 @@ namespace MingUnity.FaceRec
             /// <summary>
             /// 人脸数据
             /// </summary>
-            public struct Face
+            public class Face
             {
                 /// <summary>
                 /// 人脸图片的唯一标识
@@ -84,7 +84,7 @@ namespace MingUnity.FaceRec
                 /// <summary>
                 /// 区域信息
                 /// </summary>
-                public struct Location
+                public class Location
                 {
                     /// <summary>
                     /// 左
@@ -115,7 +115,7 @@ namespace MingUnity.FaceRec
                 /// <summary>
                 /// 三维旋转
                 /// </summary>
-                public struct Angle
+                public class Angle
                 {
                     /// <summary>
                     /// 左右旋转角[-90(左), 90(右)]
@@ -136,7 +136,7 @@ namespace MingUnity.FaceRec
                 /// <summary>
                 /// 质量
                 /// </summary>
-                public struct Quality
+                public class Quality
                 {
                     /// <summary>
                     /// 遮挡比例
@@ -164,7 +164,7 @@ namespace MingUnity.FaceRec
                     /// <summary>
                     /// 遮挡比例
                     /// </summary>
-                    public struct Occlusion
+                    public class Occlusion
                     {
                         /// <summary>
                         /// 左眼遮挡比例
