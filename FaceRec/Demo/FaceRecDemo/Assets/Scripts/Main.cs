@@ -12,7 +12,7 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        _faceDetect = new FaceDetect(new FaceAppData("11328070", "eFVTu2NNHCgIRmLsXU4l0SNQ", "eCmbZXcDkqN9CILrwUqikyL4TuzPdRWD"));
+        _faceDetect = new FaceDetect(new FaceAppData("11253066", "WwnwTfmq9ulkzknDBOv9tr6s", "7DNbqdtYvhVr0nR8YMtbIUeFfwyCBVgc"));
     }
 
     private void OnGUI()

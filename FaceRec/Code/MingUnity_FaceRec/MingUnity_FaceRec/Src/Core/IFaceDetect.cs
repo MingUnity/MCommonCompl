@@ -23,9 +23,15 @@ namespace MingUnity.FaceRec
         /// <summary>
         /// 检测
         /// </summary>
+        /// <param name="colors">像素颜色数组</param>        
+        FaceDetectRes Detect(Color32[] colors, int width, int height);
+
+        /// <summary>
+        /// 检测
+        /// </summary>
         /// <param name="imageBytes">图片源数据</param>
         FaceDetectRes Detect(byte[] imageBytes);
-
+        
         /// <summary>
         /// 异步检测
         /// </summary>
