@@ -151,6 +151,42 @@ namespace MingUnity.WebCamera
         }
 
         /// <summary>
+        /// 旋转角
+        /// </summary>
+        public int RotationAngle
+        {
+            get
+            {
+                int res = 0;
+
+                if (_camTex != null)
+                {
+                    res = _camTex.videoRotationAngle;
+                }
+
+                return res;
+            }
+        }
+
+        /// <summary>
+        /// 垂直镜像
+        /// </summary>
+        public bool VerticalMirror
+        {
+            get
+            {
+                bool res = false;
+
+                if (_camTex != null)
+                {
+                    res = _camTex.videoVerticallyMirrored;
+                }
+
+                return res;
+            }
+        }
+
+        /// <summary>
         /// 打开
         /// </summary>
         public void Open(int width, int height, bool focus = false, float fps = 30)

@@ -54,6 +54,16 @@
             摄像头开启标识
             </summary>
         </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.RotationAngle">
+            <summary>
+            旋转角
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.UniWebCamera.VerticalMirror">
+            <summary>
+            垂直镜像
+            </summary>
+        </member>
         <member name="M:MingUnity.WebCamera.UniWebCamera.Open(System.Int32,System.Int32,System.Boolean,System.Single)">
             <summary>
             打开
