@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MingUnity_AssetbundleEditor", "MingUnity_AssetbundleEditor\MingUnity_AssetbundleEditor.csproj", "{9510BF59-8228-4321-9F6F-DA7B14E88D7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9510BF59-8228-4321-9F6F-DA7B14E88D7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9510BF59-8228-4321-9F6F-DA7B14E88D7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9510BF59-8228-4321-9F6F-DA7B14E88D7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9510BF59-8228-4321-9F6F-DA7B14E88D7D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41F2C87C-20C6-4B8B-8AC1-F0835B96D6B0}
+	EndGlobalSection
+EndGlobal

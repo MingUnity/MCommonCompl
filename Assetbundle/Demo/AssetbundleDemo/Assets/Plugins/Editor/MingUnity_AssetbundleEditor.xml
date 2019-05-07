@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MingUnity_AssetbundleEditor</name>
+    </assembly>
+    <members>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleBuilder._configPath">
+            <summary>
+            配置路径
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleBuilder._settingModel">
+            <summary>
+            设置模型
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleBuilder.BuildAssetBundles">
+            <summary>
+            构建AB包
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleBuilder.SettingAssetBundle">
+            <summary>
+            设置AB包
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleBuilder.LoadConfig(System.Action{AssetBundleSetting})">
+            <summary>
+            加载配置
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleBuilder.GetDefaultConfig">
+            <summary>
+            获取默认设置
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleBuilder.SaveConfig">
+            <summary>
+            保存配置
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel._view">
+            <summary>
+            视图
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel._outputDir">
+            <summary>
+            输出目录
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel._options">
+            <summary>
+            选项
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel._target">
+            <summary>
+            目标平台
+            </summary>
+        </member>
+        <member name="P:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel.OutputDir">
+            <summary>
+            输出目录
+            </summary>
+        </member>
+        <member name="P:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel.Options">
+            <summary>
+            选项
+            </summary>
+        </member>
+        <member name="P:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel.Target">
+            <summary>
+            目标平台
+            </summary>
+        </member>
+        <member name="E:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel.OnSaveEvent">
+            <summary>
+            保存事件
+            </summary>
+        </member>
+        <member name="E:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel.OnSaveBuildEvent">
+            <summary>
+            构建事件
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel.Save">
+            <summary>
+            保存
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleSettingModel.SaveBuild">
+            <summary>
+            保存并构建
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView._outputDir">
+            <summary>
+            输出目录
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView._options">
+            <summary>
+            选项选中列表
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView._buildTarget">
+            <summary>
+            目标平台
+            </summary>
+        </member>
+        <member name="P:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.OutputDir">
+            <summary>
+            输出目录
+            </summary>
+        </member>
+        <member name="P:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.SelectedOptions">
+            <summary>
+            选中的选项
+            </summary>
+        </member>
+        <member name="P:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.Target">
+            <summary>
+            目标平台
+            </summary>
+        </member>
+        <member name="E:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.OnSaveButtonClickEvent">
+            <summary>
+            保存按钮点击事件
+            </summary>
+        </member>
+        <member name="E:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.OnSaveBuildButtonClickEvent">
+            <summary>
+            保存构建按钮点击事件
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.ShowView">
+            <summary>
+            显示
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.CloseView">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.OnSaveButtonClick">
+            <summary>
+            保存按钮点击
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.AssetBundleSettingView.OnSaveBuildButtonClick">
+            <summary>
+            保存并且构建按钮点击
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.StrDef.ROAMING_PRODUCT">
+            <summary>
+            Roaming下应用的文件夹
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.StrDef.BUILD_ASSETBUNDLE">
+            <summary>
+            构建AB包
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.StrDef.SETTING_ASSETBUNDLE">
+            <summary>
+            设置打AB包的配置
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.StrDef.ASSETBUNDLE_SETTING_PATH">
+            <summary>
+            AB包构建配置路径
+            </summary>
+        </member>
+        <member name="F:MingUnity.Editor.AssetbundleModule.StrDef.ASSETBUNDLE_DEFAULT_OUTPUTDIR">
+            <summary>
+            AB包默认输出目录
+            </summary>
+        </member>
+        <member name="P:MingUnity.Editor.AssetbundleModule.IEditorModel.View">
+            <summary>
+            视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.IEditorModel.Setup">
+            <summary>
+            装载数据
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.IEditorModel.UnSetup">
+            <summary>
+            卸载数据
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.IEditorView.ShowView">
+            <summary>
+            显示
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.IEditorView.CloseView">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.ViewManager.Show``1(MingUnity.Editor.AssetbundleModule.IEditorModel)">
+            <summary>
+            显示
+            </summary>
+        </member>
+        <member name="M:MingUnity.Editor.AssetbundleModule.ViewManager.Close(MingUnity.Editor.AssetbundleModule.IEditorModel)">
+            <summary>
+            关闭
+            </summary>
+        </member>
+        <member name="T:AssetBundleSetting">
+            <summary>
+            AB包构建设置
+            </summary>
+        </member>
+        <member name="F:AssetBundleSetting.outputDir">
+            <summary>
+            输出目录
+            </summary>
+        </member>
+        <member name="F:AssetBundleSetting.options">
+            <summary>
+            打包选项
+            </summary>
+        </member>
+        <member name="F:AssetBundleSetting.targetPlatform">
+            <summary>
+            目标平台
+            </summary>
+        </member>
+    </members>
+</doc>
