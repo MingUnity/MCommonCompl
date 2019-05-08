@@ -69,6 +69,11 @@
             视图基类
             </summary>
         </member>
+        <member name="F:MingUnity.MVVM.View.ViewBase`1._root">
+            <summary>
+            根节点
+            </summary>
+        </member>
         <member name="P:MingUnity.MVVM.View.ViewBase`1.Active">
             <summary>
             激活
@@ -129,6 +134,26 @@
             视图服务接口
             </summary>
         </member>
+        <member name="M:MingUnity.MVVM.View.IViewService.Create``1(MingUnity.MVVM.ViewModel.IViewModel,UnityEngine.Transform,System.Action{System.String})">
+            <summary>
+            创建视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.IViewService.Switch(System.String)">
+            <summary>
+            切换视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.IViewService.Backwards">
+            <summary>
+            回退视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.IViewService.Destroy(System.String)">
+            <summary>
+            销毁视图
+            </summary>
+        </member>
         <member name="T:MingUnity.MVVM.View.ViewService">
             <summary>
             视图服务
@@ -139,19 +164,44 @@
             视图字典
             </summary>
         </member>
+        <member name="F:MingUnity.MVVM.View.ViewService._viewHistory">
+            <summary>
+            视图记录
+            </summary>
+        </member>
         <member name="P:MingUnity.MVVM.View.ViewService.Item(System.String)">
             <summary>
             视图索引
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.View.ViewService.CreateView``1(MingUnity.MVVM.ViewModel.IViewModel,UnityEngine.Transform,System.Action{System.String})">
+        <member name="F:MingUnity.MVVM.View.ViewService._curGuid">
+            <summary>
+            当前视图Id
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.ViewService.Create``1(MingUnity.MVVM.ViewModel.IViewModel,UnityEngine.Transform,System.Action{System.String})">
             <summary>
             创建视图
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.View.ViewService.DestroyView(System.String)">
+        <member name="M:MingUnity.MVVM.View.ViewService.Destroy(System.String)">
             <summary>
             销毁视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.ViewService.Switch(System.String)">
+            <summary>
+            切换视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.ViewService.Backwards">
+            <summary>
+            回退视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.ViewService.SetActive(System.String,System.Boolean)">
+            <summary>
+            设置激活
             </summary>
         </member>
     </members>

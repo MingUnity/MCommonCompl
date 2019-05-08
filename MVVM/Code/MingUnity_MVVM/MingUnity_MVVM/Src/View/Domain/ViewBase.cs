@@ -12,6 +12,9 @@ namespace MingUnity.MVVM.View
     {
         private T _viewModel;
 
+        /// <summary>
+        /// 根节点
+        /// </summary>
         protected RectTransform _root;
 
         /// <summary>
