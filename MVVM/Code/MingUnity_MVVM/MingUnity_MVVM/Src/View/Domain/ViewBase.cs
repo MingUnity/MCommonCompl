@@ -10,17 +10,15 @@ namespace MingUnity.MVVM.View
     /// </summary>
     public abstract class ViewBase<T> : IView where T : class, IViewModel
     {
-        private T _viewModel;
+        /// <summary>
+        /// 视图模型
+        /// </summary>
+        protected T _viewModel;
 
         /// <summary>
         /// 根节点
         /// </summary>
         protected RectTransform _root;
-
-        /// <summary>
-        /// 激活
-        /// </summary>
-        public abstract bool Active { get; }
 
         /// <summary>
         /// 视图模型

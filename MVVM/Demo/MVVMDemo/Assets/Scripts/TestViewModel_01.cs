@@ -1,16 +1,32 @@
-﻿using System.Collections;
+﻿using MingUnity.MVVM.Model;
+using MingUnity.MVVM.ViewModel;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class TestViewModel_01 : MonoBehaviour {
+public class TestViewModel_01 : ViewModelBase<IModel>
+{
+    public override bool Active
+    {
+        get
+        {
+            throw new NotImplementedException();
+        }
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        set
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public override void Setup()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override void UnSetup()
+    {
+        throw new NotImplementedException();
+    }
 }

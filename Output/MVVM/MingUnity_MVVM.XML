@@ -69,14 +69,14 @@
             视图基类
             </summary>
         </member>
+        <member name="F:MingUnity.MVVM.View.ViewBase`1._viewModel">
+            <summary>
+            视图模型
+            </summary>
+        </member>
         <member name="F:MingUnity.MVVM.View.ViewBase`1._root">
             <summary>
             根节点
-            </summary>
-        </member>
-        <member name="P:MingUnity.MVVM.View.ViewBase`1.Active">
-            <summary>
-            激活
             </summary>
         </member>
         <member name="P:MingUnity.MVVM.View.ViewBase`1.ViewModel">
@@ -117,11 +117,6 @@
         <member name="P:MingUnity.MVVM.View.IView.ViewModel">
             <summary>
             视图模型
-            </summary>
-        </member>
-        <member name="P:MingUnity.MVVM.View.IView.Active">
-            <summary>
-            激活
             </summary>
         </member>
         <member name="M:MingUnity.MVVM.View.IView.Create(UnityEngine.Transform,System.Action)">
