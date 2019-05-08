@@ -19,7 +19,15 @@
             <summary>
             人脸检测
             </summary>
-            <param name="texture">图片Texture</param>
+            <param name="texture">图片纹理</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceDetect.Detect(UnityEngine.Color32[],System.Int32,System.Int32)">
+            <summary>
+            人脸检测
+            </summary>
+            <param name="colors">像素颜色数组</param>
+            <param name="width">图片宽</param>
+            <param name="height">图片高</param>
         </member>
         <member name="M:MingUnity.FaceRec.FaceDetect.Detect(System.Byte[])">
             <summary>
@@ -44,7 +52,7 @@
         </member>
         <member name="M:MingUnity.FaceRec.FaceDetect.Color32ArrayToImageBuffer(UnityEngine.Color32[],System.Int32,System.Int32)">
             <summary>
-            像素点色值数组转图片二进制数据
+            像素颜色数组转图片二进制数据
             </summary>
         </member>
         <member name="T:MingUnity.FaceRec.FaceRecBase">
@@ -73,6 +81,12 @@
             检测
             </summary>
             <param name="texture">图片纹理</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceDetect.Detect(UnityEngine.Color32[],System.Int32,System.Int32)">
+            <summary>
+            检测
+            </summary>
+            <param name="colors">像素颜色数组</param>        
         </member>
         <member name="M:MingUnity.FaceRec.IFaceDetect.Detect(System.Byte[])">
             <summary>

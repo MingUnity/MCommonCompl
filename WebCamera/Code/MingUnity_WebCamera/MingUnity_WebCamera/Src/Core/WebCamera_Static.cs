@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace MingUnity.WebCamera
 {
-    public partial class UniWebCamera
+    public partial class WebCamera
     {
         /// <summary>
         /// 网络摄像头列表
         /// </summary>
-        private static Dictionary<int, UniWebCamera> _webCamDic = new Dictionary<int, UniWebCamera>();
+        private static Dictionary<int, WebCamera> _webCamDic = new Dictionary<int, WebCamera>();
 
         /// <summary>
         /// 初始化
@@ -50,15 +50,15 @@ namespace MingUnity.WebCamera
         /// <summary>
         /// 获取网络摄像头
         /// </summary>
-        public static UniWebCamera Get(int index)
+        public static WebCamera Get(int index)
         {
-            UniWebCamera result = null;
+            WebCamera result = null;
 
             _webCamDic?.TryGetValue(index, out result);
 
             if (result == null)
             {
-                result = new UniWebCamera(index);
+                result = new WebCamera(index);
 
                 if (_webCamDic != null)
                 {
@@ -72,13 +72,13 @@ namespace MingUnity.WebCamera
         /// <summary>
         /// 获取网络摄像头
         /// </summary>
-        public static UniWebCamera Get(string name)
+        public static WebCamera Get(string name)
         {
-            UniWebCamera result = null;
+            WebCamera result = null;
 
             for (int i = 0; i < Count; i++)
             {
-                UniWebCamera webCam = Get(i);
+                WebCamera webCam = Get(i);
 
                 if (webCam != null && webCam.Name == name)
                 {
@@ -94,13 +94,13 @@ namespace MingUnity.WebCamera
         /// <summary>
         /// 获取前置网络摄像头
         /// </summary>
-        public static UniWebCamera GetFrontFacing()
+        public static WebCamera GetFrontFacing()
         {
-            UniWebCamera result = null;
+            WebCamera result = null;
 
             for (int i = 0; i < Count; i++)
             {
-                UniWebCamera webCam = Get(i);
+                WebCamera webCam = Get(i);
 
                 if (webCam != null && webCam.IsFrontFacing)
                 {

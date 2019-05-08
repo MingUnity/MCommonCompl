@@ -4,132 +4,142 @@
         <name>MingUnity_WebCamera</name>
     </assembly>
     <members>
-        <member name="T:MingUnity.WebCamera.UniWebCamera">
+        <member name="T:MingUnity.WebCamera.WebCamera">
             <summary>
             网络摄像头
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.Index">
+        <member name="P:MingUnity.WebCamera.WebCamera.Index">
             <summary>
             索引
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.IsValid">
+        <member name="P:MingUnity.WebCamera.WebCamera.IsValid">
             <summary>
             有效性
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.Name">
+        <member name="P:MingUnity.WebCamera.WebCamera.Name">
             <summary>
             名字
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.IsFrontFacing">
+        <member name="P:MingUnity.WebCamera.WebCamera.IsFrontFacing">
             <summary>
             前置摄像头标识
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.CamTexture">
+        <member name="P:MingUnity.WebCamera.WebCamera.CamTexture">
             <summary>
             摄像头纹理
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.Width">
+        <member name="P:MingUnity.WebCamera.WebCamera.Width">
             <summary>
             宽
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.Height">
+        <member name="P:MingUnity.WebCamera.WebCamera.Height">
             <summary>
             高
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.FPS">
+        <member name="P:MingUnity.WebCamera.WebCamera.FPS">
             <summary>
             FPS
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.IsPlaying">
+        <member name="P:MingUnity.WebCamera.WebCamera.IsPlaying">
             <summary>
             摄像头开启标识
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Open(System.Int32,System.Int32,System.Boolean,System.Single)">
+        <member name="P:MingUnity.WebCamera.WebCamera.RotationAngle">
+            <summary>
+            旋转角
+            </summary>
+        </member>
+        <member name="P:MingUnity.WebCamera.WebCamera.VerticalMirror">
+            <summary>
+            垂直镜像
+            </summary>
+        </member>
+        <member name="M:MingUnity.WebCamera.WebCamera.Open(System.Int32,System.Int32,System.Boolean,System.Single)">
             <summary>
             打开
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Close">
+        <member name="M:MingUnity.WebCamera.WebCamera.Close">
             <summary>
             关闭
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.ReConnect(System.Int32,System.Int32,System.Single)">
+        <member name="M:MingUnity.WebCamera.WebCamera.ReConnect(System.Int32,System.Int32,System.Single)">
             <summary>
             重连
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Snapshot(System.Action{UnityEngine.Texture2D})">
+        <member name="M:MingUnity.WebCamera.WebCamera.Snapshot(System.Action{UnityEngine.Texture2D})">
             <summary>
             摄像头快照
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Snapshot(System.Action{UnityEngine.Color[]})">
+        <member name="M:MingUnity.WebCamera.WebCamera.Snapshot(System.Action{UnityEngine.Color[]})">
             <summary>
             摄像头快照
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Snapshot(System.Action{UnityEngine.Color32[]})">
+        <member name="M:MingUnity.WebCamera.WebCamera.Snapshot(System.Action{UnityEngine.Color32[]})">
             <summary>
             摄像头快照
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.TryGetValue``1(``0[],System.Int32,``0@)">
+        <member name="M:MingUnity.WebCamera.WebCamera.TryGetValue``1(``0[],System.Int32,``0@)">
             <summary>
             从数组中获取值
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.IndexValid(System.Array,System.Int32)">
+        <member name="M:MingUnity.WebCamera.WebCamera.IndexValid(System.Array,System.Int32)">
             <summary>
             数组取值有效性
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.GetDevice">
+        <member name="M:MingUnity.WebCamera.WebCamera.GetDevice">
             <summary>
             获取设备
             </summary>
         </member>
-        <member name="F:MingUnity.WebCamera.UniWebCamera._webCamDic">
+        <member name="F:MingUnity.WebCamera.WebCamera._webCamDic">
             <summary>
             网络摄像头列表
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Initialize(System.Action{System.Boolean})">
+        <member name="M:MingUnity.WebCamera.WebCamera.Initialize(System.Action{System.Boolean})">
             <summary>
             初始化
             </summary>
         </member>
-        <member name="P:MingUnity.WebCamera.UniWebCamera.Count">
+        <member name="P:MingUnity.WebCamera.WebCamera.Count">
             <summary>
             网络摄像头数目
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Get(System.Int32)">
+        <member name="M:MingUnity.WebCamera.WebCamera.Get(System.Int32)">
             <summary>
             获取网络摄像头
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.Get(System.String)">
+        <member name="M:MingUnity.WebCamera.WebCamera.Get(System.String)">
             <summary>
             获取网络摄像头
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.GetFrontFacing">
+        <member name="M:MingUnity.WebCamera.WebCamera.GetFrontFacing">
             <summary>
             获取前置网络摄像头
             </summary>
         </member>
-        <member name="M:MingUnity.WebCamera.UniWebCamera.AuthorizeRequest(System.Action{System.Boolean})">
+        <member name="M:MingUnity.WebCamera.WebCamera.AuthorizeRequest(System.Action{System.Boolean})">
             <summary>
             请求授权
             </summary>

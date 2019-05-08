@@ -40,7 +40,7 @@ namespace MingUnity.FaceRec
         /// <summary>
         /// 人脸检测
         /// </summary>
-        /// <param name="texture">图片Texture</param>
+        /// <param name="texture">图片纹理</param>
         public FaceDetectRes Detect(Texture2D texture)
         {
             FaceDetectRes faceDetectRes = null;
@@ -53,6 +53,17 @@ namespace MingUnity.FaceRec
             }
 
             return faceDetectRes;
+        }
+
+        /// <summary>
+        /// 人脸检测
+        /// </summary>
+        /// <param name="colors">像素颜色数组</param>
+        /// <param name="width">图片宽</param>
+        /// <param name="height">图片高</param>
+        public FaceDetectRes Detect(Color32[] colors, int width, int height)
+        {
+            return Detect(Color32ArrayToImageBuffer(colors, width, height));
         }
 
         /// <summary>
@@ -122,7 +133,7 @@ namespace MingUnity.FaceRec
         }
 
         /// <summary>
-        /// 像素点色值数组转图片二进制数据
+        /// 像素颜色数组转图片二进制数据
         /// </summary>
         private byte[] Color32ArrayToImageBuffer(Color32[] colors, int width, int height)
         {

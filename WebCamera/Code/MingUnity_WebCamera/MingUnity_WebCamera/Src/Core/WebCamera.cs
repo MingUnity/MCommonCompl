@@ -6,7 +6,7 @@ namespace MingUnity.WebCamera
     /// <summary>
     /// 网络摄像头
     /// </summary>
-    public partial class UniWebCamera
+    public partial class WebCamera
     {
         private int _camIndex;
 
@@ -151,6 +151,42 @@ namespace MingUnity.WebCamera
         }
 
         /// <summary>
+        /// 旋转角
+        /// </summary>
+        public int RotationAngle
+        {
+            get
+            {
+                int res = 0;
+
+                if (_camTex != null)
+                {
+                    res = _camTex.videoRotationAngle;
+                }
+
+                return res;
+            }
+        }
+
+        /// <summary>
+        /// 垂直镜像
+        /// </summary>
+        public bool VerticalMirror
+        {
+            get
+            {
+                bool res = false;
+
+                if (_camTex != null)
+                {
+                    res = _camTex.videoVerticallyMirrored;
+                }
+
+                return res;
+            }
+        }
+
+        /// <summary>
         /// 打开
         /// </summary>
         public void Open(int width, int height, bool focus = false, float fps = 30)
@@ -191,7 +227,7 @@ namespace MingUnity.WebCamera
             }
             catch (Exception e)
             {
-                Debug.LogErrorFormat("<Ming> <Ming> ## Uni Error ## Cls:UniWebCamera Func:Open CamIndex:{0} Info:{1}", _camIndex, e);
+                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Open CamIndex:{0} Info:{1}", _camIndex, e);
             }
 
         }
@@ -211,13 +247,13 @@ namespace MingUnity.WebCamera
                     }
                     else
                     {
-                        Debug.LogWarningFormat("<Ming> <Ming> ## Uni Warning ## Cls:UniWebCamera Func:Close CamIndex:{0} Info:Has closed", _camIndex);
+                        Debug.LogWarningFormat("<Ming> ## Uni Warning ## Cls:WebCamera Func:Close CamIndex:{0} Info:Has closed", _camIndex);
                     }
                 }
             }
             catch (Exception e)
             {
-                Debug.LogErrorFormat("<Ming> <Ming> ## Uni Error ## Cls:UniWebCamera Func:Close CamIndex:{0} Info:{1}", _camIndex, e);
+                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Close CamIndex:{0} Info:{1}", _camIndex, e);
             }
         }
 
@@ -253,7 +289,7 @@ namespace MingUnity.WebCamera
             }
             catch (Exception e)
             {
-                Debug.LogErrorFormat("<Ming> <Ming> ## Uni Error ## Cls:UniWebCamera Func:ReConnect CamIndex:{0} Info:{1}", _camIndex, e);
+                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:ReConnect CamIndex:{0} Info:{1}", _camIndex, e);
             }
         }
 
@@ -289,13 +325,13 @@ namespace MingUnity.WebCamera
                     }
                     else
                     {
-                        Debug.LogErrorFormat("<Ming> <Ming> ## Uni Error ## Cls:UniWebCamera Func:Snapshot CamIndex:{0} Info:Camera not opened", _camIndex);
+                        Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:Camera not opened", _camIndex);
                     }
                 }
             }
             catch (Exception e)
             {
-                Debug.LogErrorFormat("<Ming> <Ming> ## Uni Error ## Cls:UniWebCamera Func:Snapshot CamIndex:{0} Info:{1}", _camIndex, e);
+                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:{1}", _camIndex, e);
             }
 
             callback?.Invoke(_cacheTex);
@@ -318,13 +354,13 @@ namespace MingUnity.WebCamera
                     }
                     else
                     {
-                        Debug.LogErrorFormat("<Ming> <Ming> ## Uni Error ## Cls:UniWebCamera Func:Snapshot CamIndex:{0} Info:Camera not opened", _camIndex);
+                        Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:Camera not opened", _camIndex);
                     }
                 }
             }
             catch (Exception e)
             {
-                Debug.LogErrorFormat("<Ming> <Ming> ## Uni Error ## Cls:UniWebCamera Func:Snapshot CamIndex:{0} Info:{1}", _camIndex, e);
+                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:{1}", _camIndex, e);
             }
 
             callback?.Invoke(result);
@@ -347,13 +383,13 @@ namespace MingUnity.WebCamera
                     }
                     else
                     {
-                        Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:UniWebCamera Func:Snapshot CamIndex:{0} Info:Camera not open", _camIndex);
+                        Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:Camera not open", _camIndex);
                     }
                 }
             }
             catch (Exception e)
             {
-                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:UniWebCamera Func:Snapshot CamIndex:{0} Info:{1}", _camIndex, e);
+                Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:{1}", _camIndex, e);
             }
 
             callback?.Invoke(result);
@@ -364,7 +400,7 @@ namespace MingUnity.WebCamera
             return string.Format("CamIndex:{0} Name:{1} IsFrontFacing:{2} Width:{3} Height:{4} FPS:{5} IsPlaying:{6}", _camIndex, Name, IsFrontFacing, Width, Height, FPS, IsPlaying);
         }
 
-        private UniWebCamera(int index)
+        private WebCamera(int index)
         {
             this._camIndex = index;
 
