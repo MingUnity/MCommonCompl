@@ -46,8 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Src\Core\UniWebCamera.cs" />
-    <Compile Include="Src\Core\UniWebCamera_Static.cs" />
+    <Compile Include="Src\Core\WebCamera.cs" />
+    <Compile Include="Src\Core\WebCamera_Static.cs" />
     <Compile Include="Src\Utility\TaskManager.cs" />
   </ItemGroup>
   <ItemGroup />

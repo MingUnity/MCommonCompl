@@ -12,7 +12,7 @@ public class Main : MonoBehaviour
 
     private void Start()
     {
-        UniWebCamera.Initialize((result) =>
+        WebCamera.Initialize((result) =>
         {
             Debug.LogFormat("WebCamera init {0}", result ? "success" : "fail");
         });
@@ -30,7 +30,7 @@ public class Main : MonoBehaviour
 
             if (int.TryParse(_camIndex, out camIndex))
             {
-                UniWebCamera webCam = UniWebCamera.Get(camIndex);
+                WebCamera webCam = WebCamera.Get(camIndex);
 
                 webCam.Open(1280, 720);
 
@@ -47,7 +47,7 @@ public class Main : MonoBehaviour
 
             if (int.TryParse(_camIndex, out camIndex))
             {
-                UniWebCamera.Get(camIndex).Close();
+                WebCamera.Get(camIndex).Close();
 
                 if (imgCamera != null)
                 {
@@ -62,7 +62,7 @@ public class Main : MonoBehaviour
 
             if (int.TryParse(_camIndex, out camIndex))
             {
-                UniWebCamera.Get(camIndex).ReConnect(1280, 720);
+                WebCamera.Get(camIndex).ReConnect(1280, 720);
             }
         }
 
@@ -72,7 +72,7 @@ public class Main : MonoBehaviour
 
             if (int.TryParse(_camIndex, out camIndex))
             {
-                UniWebCamera.Get(camIndex).Snapshot((Texture2D tex) =>
+                WebCamera.Get(camIndex).Snapshot((Texture2D tex) =>
                 {
                     if (imgSnapshot != null)
                     {
