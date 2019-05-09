@@ -73,15 +73,39 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 切换视图
         /// </summary>
-        public void Switch(string guid)
+        public void Switch(string guid, bool record = false)
         {
-            SetActive(guid, true);
+            if (!string.IsNullOrEmpty(guid))
+            {
+                SetActive(_curGuid, false);
 
-            SetActive(_curGuid, false);
+                SetActive(guid, true);
+                
+                if (record && !string.IsNullOrEmpty(_curGuid))
+                {
+                    _viewHistory?.Push(_curGuid);
+                }
 
-            _viewHistory?.Push(_curGuid);
+                _curGuid = guid;
+            }
+        }
 
-            _curGuid = guid;
+        /// <summary>
+        /// 切换视图
+        /// </summary>
+        public void Switch(string guid, IViewModel viewModel, bool record = false)
+        {
+            if (viewModel != null)
+            {
+                IView view = this[guid];
+
+                if (view != null)
+                {
+                    view.ViewModel = viewModel;
+                }
+            }
+
+            Switch(guid, record);
         }
 
         /// <summary>
@@ -89,7 +113,10 @@ namespace MingUnity.MVVM.View
         /// </summary>
         public void Backwards()
         {
-            Switch(_viewHistory?.Pop());
+            if (_viewHistory != null && _viewHistory.Count > 0)
+            {
+                Switch(_viewHistory.Pop());
+            }
         }
 
         /// <summary>

@@ -33,8 +33,6 @@ namespace MingUnity.MVVM.View
             {
                 if (_viewModel != null)
                 {
-                    _viewModel.UnSetup();
-
                     _viewModel.PropertyChanged -= ViewModelPropertyChanged;
                 }
 
@@ -52,7 +50,7 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 创建
         /// </summary>
-        public abstract void Create(Transform parent = null, Action callback = null);
+        public abstract void Create(Transform parent, Action callback);
 
         /// <summary>
         /// 注销
@@ -63,8 +61,6 @@ namespace MingUnity.MVVM.View
 
             if (_viewModel != null)
             {
-                _viewModel.UnSetup();
-
                 _viewModel.PropertyChanged -= ViewModelPropertyChanged;
             }
 

@@ -9,8 +9,14 @@ namespace MingUnity.MVVM.ViewModel
     /// </summary>
     public abstract class ViewModelBase<T> : IViewModel where T : IModel
     {
-        private T _model;
+        /// <summary>
+        /// 数据模型
+        /// </summary>
+        protected T _model;
 
+        /// <summary>
+        /// 激活
+        /// </summary>
         protected bool _active;
 
         /// <summary>
@@ -44,11 +50,6 @@ namespace MingUnity.MVVM.ViewModel
         /// 装载
         /// </summary>
         public abstract void Setup();
-
-        /// <summary>
-        /// 卸载
-        /// </summary>
-        public abstract void UnSetup();
 
         /// <summary>
         /// 执行属性改变

@@ -17,7 +17,12 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 切换视图
         /// </summary>
-        void Switch(string guid);
+        void Switch(string guid, bool record = false);
+
+        /// <summary>
+        /// 切换视图
+        /// </summary>
+        void Switch(string guid, IViewModel viewModel, bool record = false);
 
         /// <summary>
         /// 回退视图

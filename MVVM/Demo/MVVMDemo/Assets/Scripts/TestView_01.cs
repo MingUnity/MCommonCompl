@@ -2,7 +2,7 @@
 using MingUnity.MVVM.View;
 using UnityEngine;
 
-public class TestView_01 : ViewBase<TestViewModel_01>
+public class TestView_01 : ViewBase<TestViewModel>
 {
     public bool Active
     {
@@ -19,17 +19,25 @@ public class TestView_01 : ViewBase<TestViewModel_01>
         }
         private set
         {
-            _root?.gameObject.SetActive(value);
+            if (_root != null)
+            {
+                _root.gameObject.SetActive(value);
+            }
         }
     }
 
-    public override void Create(Transform parent = null, Action callback = null)
+    public override void Create(Transform parent, Action callback)
     {
         GameObject prefab = Resources.Load<GameObject>("TestView_01");
 
         if (prefab != null)
         {
-            _root = GameObject.Instantiate(prefab, parent)?.GetComponent<RectTransform>();
+            _root = GameObject.Instantiate(prefab, parent).GetComponent<RectTransform>();
+        }
+
+        if (callback != null)
+        {
+            callback.Invoke();
         }
     }
 
