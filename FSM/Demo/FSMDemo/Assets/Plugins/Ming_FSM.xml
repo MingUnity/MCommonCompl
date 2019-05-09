@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ming_FSM</name>
+    </assembly>
+    <members>
+        <member name="T:Ming.FSM.IFSMState">
+            <summary>
+            状态接口
+            </summary>
+        </member>
+        <member name="P:Ming.FSM.IFSMState.Item(System.Object)">
+            <summary>
+            条件过渡
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.IFSMState.OnEnter(System.Object[])">
+            <summary>
+            进入
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.IFSMState.OnExit">
+            <summary>
+            退出
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.IFSMState.OnStay">
+            <summary>
+            驻留
+            </summary>
+        </member>
+        <member name="T:Ming.FSM.IFSMSystem">
+            <summary>
+            有限状态机接口
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.IFSMSystem.AddState(Ming.FSM.IFSMState,System.Boolean)">
+            <summary>
+            添加状态
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.IFSMSystem.SetTransition(System.Object,System.Object[])">
+            <summary>
+            设置过渡
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.IFSMSystem.TurnDefault">
+            <summary>
+            跳转默认状态
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.IFSMSystem.Update">
+            <summary>
+            刷新
+            </summary>
+        </member>
+        <member name="T:Ming.FSM.FSMState">
+            <summary>
+            FSM状态
+            </summary>
+        </member>
+        <member name="F:Ming.FSM.FSMState._stateTransitionDic">
+            <summary>
+            过渡状态字典
+            </summary>
+        </member>
+        <member name="P:Ming.FSM.FSMState.Item(System.Object)">
+            <summary>
+            获取目标状态
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMState.OnEnter(System.Object[])">
+            <summary>
+            进入
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMState.OnExit">
+            <summary>
+            退出
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMState.OnStay">
+            <summary>
+            驻留
+            </summary>
+        </member>
+        <member name="T:Ming.FSM.FSMSystem">
+            <summary>
+            有限状态机
+            </summary>
+        </member>
+        <member name="F:Ming.FSM.FSMSystem._stateList">
+            <summary>
+            状态列表
+            </summary>
+        </member>
+        <member name="F:Ming.FSM.FSMSystem._curState">
+            <summary>
+            当前状态
+            </summary>
+        </member>
+        <member name="F:Ming.FSM.FSMSystem._defaultState">
+            <summary>
+            默认状态
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMSystem.AddState(Ming.FSM.IFSMState,System.Boolean)">
+            <summary>
+            添加状态
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMSystem.TurnDefault">
+            <summary>
+            跳转默认状态
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMSystem.SetTransition(System.Object,System.Object[])">
+            <summary>
+            设置过渡
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMSystem.Update">
+            <summary>
+            刷新
+            </summary>
+        </member>
+        <member name="M:Ming.FSM.FSMSystem.TurnState(Ming.FSM.IFSMState,Ming.FSM.IFSMState,System.Object[])">
+            <summary>
+            跳转状态
+            </summary>
+        </member>
+    </members>
+</doc>

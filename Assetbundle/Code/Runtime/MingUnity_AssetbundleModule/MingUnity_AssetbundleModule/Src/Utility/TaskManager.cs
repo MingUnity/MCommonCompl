@@ -14,7 +14,7 @@ using System.Collections.Generic;
 /// It is an error to attempt to start a task that has been stopped or which has  
 /// naturally terminated.  
 
-namespace MingUnity.WebCamera
+namespace MingUnity.AssetbundleModule
 {
     internal class Task
     {
@@ -212,7 +212,7 @@ namespace MingUnity.WebCamera
         {
             if (_singleton == null)
             {
-                _singleton = new GameObject("WebCameraTask").AddComponent<TaskManager>();
+                _singleton = new GameObject("AssetBundleTask").AddComponent<TaskManager>();
             }
             return new TaskState(coroutine);
         }
