@@ -17,6 +17,6 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 创建
         /// </summary>
-        void Create(Transform parent = null, Action callback = null);
+        void Create(Transform parent, Action callback);
     }
 }

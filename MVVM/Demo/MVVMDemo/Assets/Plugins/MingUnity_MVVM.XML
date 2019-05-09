@@ -14,6 +14,16 @@
             视图模型基类
             </summary>
         </member>
+        <member name="F:MingUnity.MVVM.ViewModel.ViewModelBase`1._model">
+            <summary>
+            数据模型
+            </summary>
+        </member>
+        <member name="F:MingUnity.MVVM.ViewModel.ViewModelBase`1._active">
+            <summary>
+            激活
+            </summary>
+        </member>
         <member name="P:MingUnity.MVVM.ViewModel.ViewModelBase`1.Model">
             <summary>
             数据模型
@@ -34,11 +44,6 @@
             装载
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.ViewModel.ViewModelBase`1.UnSetup">
-            <summary>
-            卸载
-            </summary>
-        </member>
         <member name="M:MingUnity.MVVM.ViewModel.ViewModelBase`1.RaisePropertyChanged(System.String)">
             <summary>
             执行属性改变
@@ -57,11 +62,6 @@
         <member name="M:MingUnity.MVVM.ViewModel.IViewModel.Setup">
             <summary>
             装载
-            </summary>
-        </member>
-        <member name="M:MingUnity.MVVM.ViewModel.IViewModel.UnSetup">
-            <summary>
-            卸载
             </summary>
         </member>
         <member name="T:MingUnity.MVVM.View.ViewBase`1">
@@ -134,7 +134,12 @@
             创建视图
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.View.IViewService.Switch(System.String)">
+        <member name="M:MingUnity.MVVM.View.IViewService.Switch(System.String,System.Boolean)">
+            <summary>
+            切换视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.IViewService.Switch(System.String,MingUnity.MVVM.ViewModel.IViewModel,System.Boolean)">
             <summary>
             切换视图
             </summary>
@@ -184,7 +189,12 @@
             销毁视图
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.View.ViewService.Switch(System.String)">
+        <member name="M:MingUnity.MVVM.View.ViewService.Switch(System.String,System.Boolean)">
+            <summary>
+            切换视图
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.View.ViewService.Switch(System.String,MingUnity.MVVM.ViewModel.IViewModel,System.Boolean)">
             <summary>
             切换视图
             </summary>

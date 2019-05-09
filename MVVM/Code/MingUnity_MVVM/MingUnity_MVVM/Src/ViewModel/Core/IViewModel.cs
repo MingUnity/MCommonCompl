@@ -16,10 +16,5 @@ namespace MingUnity.MVVM.ViewModel
         /// 装载
         /// </summary>
         void Setup();
-
-        /// <summary>
-        /// 卸载
-        /// </summary>
-        void UnSetup();
     }
 }
