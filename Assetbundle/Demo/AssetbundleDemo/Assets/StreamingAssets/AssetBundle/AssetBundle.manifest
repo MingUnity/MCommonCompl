@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 3742569934
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: 3dobj
+      Dependencies: {}
+    Info_1:
+      Name: imge
+      Dependencies: {}

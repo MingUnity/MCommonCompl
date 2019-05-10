@@ -163,7 +163,7 @@ namespace MingUnity.AssetbundleModule
             {
                 running = true;
 
-                coroutine = _singleton.StartCoroutine(CallWrapper());
+                coroutine = singleton.StartCoroutine(CallWrapper());
             }
 
             public void Stop()
@@ -206,13 +206,14 @@ namespace MingUnity.AssetbundleModule
             }
         }
 
-        private static TaskManager _singleton;
+        private static TaskManager singleton;
 
         public static TaskState CreateTask(IEnumerator coroutine)
         {
-            if (_singleton == null)
+            if (singleton == null)
             {
-                _singleton = new GameObject("AssetBundleTask").AddComponent<TaskManager>();
+                GameObject go = new GameObject("AssetBundleTask");
+                singleton = go.AddComponent<TaskManager>();
             }
             return new TaskState(coroutine);
         }
@@ -245,6 +246,8 @@ namespace MingUnity.AssetbundleModule
         }
 
         private List<TaskInfo> _listTask = new List<TaskInfo>();
+
+        public delegate void DelegateVoid();
         public DelegateVoid OnTaskQueueFinished;
 
         public TaskInfo Add(IEnumerator c)
@@ -324,7 +327,5 @@ namespace MingUnity.AssetbundleModule
             public Task task;
         }
     }
-
-    internal delegate void DelegateVoid();
 }
 
