@@ -69,6 +69,11 @@
             打开
             </summary>
         </member>
+        <member name="M:MingUnity.WebCamera.WebCamera.Pause">
+            <summary>
+            暂停
+            </summary>
+        </member>
         <member name="M:MingUnity.WebCamera.WebCamera.Close">
             <summary>
             关闭

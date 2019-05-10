@@ -233,6 +233,22 @@ namespace MingUnity.WebCamera
         }
 
         /// <summary>
+        /// 暂停
+        /// </summary>
+        public void Pause()
+        {
+            if (!IsValid)
+            {
+                return;
+            }
+
+            if (_camTex != null && _camTex.isPlaying)
+            {
+                _camTex.Pause();
+            }
+        }
+
+        /// <summary>
         /// 关闭
         /// </summary>
         public void Close()

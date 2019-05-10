@@ -41,6 +41,16 @@ public class Main : MonoBehaviour
             }
         }
 
+        if (GUILayout.Button("Pause"))
+        {
+            int camIndex = 0;
+
+            if (int.TryParse(_camIndex, out camIndex))
+            {
+                WebCamera.Get(camIndex).Pause();
+            }
+        }
+
         if (GUILayout.Button("Close"))
         {
             int camIndex = 0;
