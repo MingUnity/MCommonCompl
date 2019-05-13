@@ -44,27 +44,27 @@
             卸载全部
             </summary>
         </member>
-        <member name="T:MingUnity.AssetbundleModule.IAssetbundleLoader">
+        <member name="T:MingUnity.AssetbundleModule.IAssetBundleLoader">
             <summary>
             AB包加载接口
             </summary>
         </member>
-        <member name="M:MingUnity.AssetbundleModule.IAssetbundleLoader.Preload(System.String)">
+        <member name="M:MingUnity.AssetbundleModule.IAssetBundleLoader.Preload(System.String)">
             <summary>
             预加载AB包
             </summary>
         </member>
-        <member name="M:MingUnity.AssetbundleModule.IAssetbundleLoader.GetAsset``1(System.String,System.String,System.Action{``0})">
+        <member name="M:MingUnity.AssetbundleModule.IAssetBundleLoader.GetAsset``1(System.String,System.String,System.Action{``0})">
             <summary>
             获取资源
             </summary>
         </member>
-        <member name="M:MingUnity.AssetbundleModule.IAssetbundleLoader.Unload(System.String,System.Boolean)">
+        <member name="M:MingUnity.AssetbundleModule.IAssetBundleLoader.Unload(System.String,System.Boolean)">
             <summary>
             卸载AB包
             </summary>
         </member>
-        <member name="M:MingUnity.AssetbundleModule.IAssetbundleLoader.UnloadAll(System.Boolean)">
+        <member name="M:MingUnity.AssetbundleModule.IAssetBundleLoader.UnloadAll(System.Boolean)">
             <summary>
             卸载所有AB包
             </summary>

@@ -8,7 +8,7 @@ namespace MingUnity.AssetbundleModule
     /// <summary>
     /// 同步ab包加载
     /// </summary>
-    public sealed class SyncAssetBundleLoader : IAssetbundleLoader
+    public sealed class SyncAssetBundleLoader : IAssetBundleLoader
     {
         private Dictionary<string, AssetBundle> _abDic = new Dictionary<string, AssetBundle>();
 

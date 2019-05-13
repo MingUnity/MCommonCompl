@@ -7,7 +7,7 @@ namespace MingUnity.MVVM.View
     /// <summary>
     /// 视图服务接口
     /// </summary>
-    public interface IViewService
+    public interface IViewFactory
     {
         /// <summary>
         /// 创建视图
@@ -15,19 +15,14 @@ namespace MingUnity.MVVM.View
         void Create<T>(IViewModel viewModel, Transform parent = null, Action<string> callback = null) where T : class, IView;
 
         /// <summary>
-        /// 切换视图
+        /// 创建视图
         /// </summary>
-        void Switch(string guid, bool record = false);
+        void Create(IView view, IViewModel viewModel, Transform parent = null, Action<string> callback = null);
 
         /// <summary>
-        /// 切换视图
+        /// 获取视图模型
         /// </summary>
-        void Switch(string guid, IViewModel viewModel, bool record = false);
-
-        /// <summary>
-        /// 回退视图
-        /// </summary>
-        void Backwards();
+        IViewModel GetViewModel(string guid);
 
         /// <summary>
         /// 销毁视图

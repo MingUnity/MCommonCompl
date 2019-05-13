@@ -9,7 +9,7 @@ namespace MingUnity.AssetbundleModule
     /// <summary>
     /// 异步AB包加载
     /// </summary>
-    public class AsyncAssetBundleLoader : IAssetbundleLoader
+    public class AsyncAssetBundleLoader : IAssetBundleLoader
     {
         private Dictionary<string, AssetBundleModel> _abDic = new Dictionary<string, AssetBundleModel>();
 

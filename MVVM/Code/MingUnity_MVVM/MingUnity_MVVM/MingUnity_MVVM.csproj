@@ -51,12 +51,10 @@
     <Compile Include="Src\ViewModel\Core\IViewModel.cs" />
     <Compile Include="Src\View\Domain\ViewBase.cs" />
     <Compile Include="Src\View\Core\IView.cs" />
-    <Compile Include="Src\View\Core\IViewService.cs" />
-    <Compile Include="Src\View\Domain\ViewService.cs" />
+    <Compile Include="Src\View\Core\IViewFactory.cs" />
+    <Compile Include="Src\View\Domain\ViewFactory.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Src\Utility\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
