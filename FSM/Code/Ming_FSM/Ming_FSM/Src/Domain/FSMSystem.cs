@@ -53,7 +53,7 @@ namespace Ming.FSM
         /// <summary>
         /// 设置过渡
         /// </summary>
-        public void SetTransition(object transition, params object[] keys)
+        public void SetTransition(int transition, params object[] keys)
         {
             if (_curState != null)
             {

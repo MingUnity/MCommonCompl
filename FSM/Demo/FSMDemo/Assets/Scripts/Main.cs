@@ -15,15 +15,15 @@ public class Main : MonoBehaviour
 
         IFSMState stateC = new StateC(_fsmSystem);
 
-        stateA[State.B] = stateB;
+        stateA[(int)State.B] = stateB;
 
-        stateA[State.C] = stateC;
+        stateA[(int)State.C] = stateC;
 
-        stateB[State.C] = stateC;
+        stateB[(int)State.C] = stateC;
 
-        stateC[State.A] = stateA;
+        stateC[(int)State.A] = stateA;
 
-        stateC[State.B] = stateB;
+        stateC[(int)State.B] = stateB;
 
         _fsmSystem.AddState(stateA, true);
 
@@ -43,7 +43,7 @@ public class Main : MonoBehaviour
         {
             if (_fsmSystem != null)
             {
-                _fsmSystem.SetTransition(State.C);
+                _fsmSystem.SetTransition((int)State.C);
             }
         }
 
@@ -59,7 +59,7 @@ public class Main : MonoBehaviour
 
 public enum State
 {
-    A,
-    B,
-    C
+    A = 0,
+    B = 1,
+    C = 2
 }

@@ -6,9 +6,9 @@
     public interface IFSMState
     {
         /// <summary>
-        /// 条件过渡
+        /// 获取目标状态
         /// </summary>
-        IFSMState this[object transition] { get; set; }
+        IFSMState this[int transition] { get; set; }
 
         /// <summary>
         /// 进入

@@ -9,9 +9,9 @@
             状态接口
             </summary>
         </member>
-        <member name="P:Ming.FSM.IFSMState.Item(System.Object)">
+        <member name="P:Ming.FSM.IFSMState.Item(System.Int32)">
             <summary>
-            条件过渡
+            获取目标状态
             </summary>
         </member>
         <member name="M:Ming.FSM.IFSMState.OnEnter(System.Object[])">
@@ -39,7 +39,7 @@
             添加状态
             </summary>
         </member>
-        <member name="M:Ming.FSM.IFSMSystem.SetTransition(System.Object,System.Object[])">
+        <member name="M:Ming.FSM.IFSMSystem.SetTransition(System.Int32,System.Object[])">
             <summary>
             设置过渡
             </summary>
@@ -59,12 +59,7 @@
             FSM状态
             </summary>
         </member>
-        <member name="F:Ming.FSM.FSMState._stateTransitionDic">
-            <summary>
-            过渡状态字典
-            </summary>
-        </member>
-        <member name="P:Ming.FSM.FSMState.Item(System.Object)">
+        <member name="P:Ming.FSM.FSMState.Item(System.Int32)">
             <summary>
             获取目标状态
             </summary>
@@ -114,7 +109,7 @@
             跳转默认状态
             </summary>
         </member>
-        <member name="M:Ming.FSM.FSMSystem.SetTransition(System.Object,System.Object[])">
+        <member name="M:Ming.FSM.FSMSystem.SetTransition(System.Int32,System.Object[])">
             <summary>
             设置过渡
             </summary>

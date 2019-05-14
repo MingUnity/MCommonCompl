@@ -7,29 +7,26 @@ namespace Ming.FSM
     /// </summary>
     public abstract class FSMState : IFSMState
     {
-        /// <summary>
-        /// 过渡状态字典
-        /// </summary>
-        private Dictionary<object, IFSMState> _stateTransitionDic = new Dictionary<object, IFSMState>();
+        private Dictionary<int, IFSMState> _transitionDic = new Dictionary<int, IFSMState>();
 
         /// <summary>
         /// 获取目标状态
         /// </summary>
-        public IFSMState this[object transition]
+        public IFSMState this[int transition]
         {
             get
             {
                 IFSMState res = null;
 
-                _stateTransitionDic?.TryGetValue(transition, out res);
+                _transitionDic?.TryGetValue(transition, out res);
 
                 return res;
             }
             set
             {
-                if (_stateTransitionDic != null)
+                if (_transitionDic != null)
                 {
-                    _stateTransitionDic[transition] = value;
+                    _transitionDic[transition] = value;
                 }
             }
         }

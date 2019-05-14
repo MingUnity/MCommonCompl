@@ -28,7 +28,7 @@ public class StateA : FSMState
         {
             if (_fsmSystem != null)
             {
-                _fsmSystem.SetTransition(State.B,"A to B");
+                _fsmSystem.SetTransition((int)State.B,"A to B");
             }
         }
 
@@ -36,7 +36,7 @@ public class StateA : FSMState
         {
             if (_fsmSystem != null)
             {
-                _fsmSystem.SetTransition(State.C);
+                _fsmSystem.SetTransition((int)State.C);
             }
         }
     }

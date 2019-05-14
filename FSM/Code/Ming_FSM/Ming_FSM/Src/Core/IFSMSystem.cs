@@ -13,7 +13,7 @@
         /// <summary>
         /// 设置过渡
         /// </summary>
-        void SetTransition(object transition, params object[] keys);
+        void SetTransition(int transition, params object[] keys);
 
         /// <summary>
         /// 跳转默认状态
