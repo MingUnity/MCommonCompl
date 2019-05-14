@@ -36,9 +36,11 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 创建视图
         /// </summary>
-        public void Create<T>(IViewModel viewModel, Transform parent = null, Action<string> callback = null) where T : class, IView
+        public void Create<T, V>(Transform parent = null, Action<string> callback = null) where T : class, IView where V : class, IViewModel
         {
             T view = Activator.CreateInstance<T>();
+
+            V viewModel = Activator.CreateInstance<V>();
 
             Create(view, viewModel, parent, callback);
         }

@@ -129,7 +129,7 @@
             视图服务接口
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.View.IViewFactory.Create``1(MingUnity.MVVM.ViewModel.IViewModel,UnityEngine.Transform,System.Action{System.String})">
+        <member name="M:MingUnity.MVVM.View.IViewFactory.Create``2(UnityEngine.Transform,System.Action{System.String})">
             <summary>
             创建视图
             </summary>
@@ -164,7 +164,7 @@
             视图索引
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.View.ViewFactory.Create``1(MingUnity.MVVM.ViewModel.IViewModel,UnityEngine.Transform,System.Action{System.String})">
+        <member name="M:MingUnity.MVVM.View.ViewFactory.Create``2(UnityEngine.Transform,System.Action{System.String})">
             <summary>
             创建视图
             </summary>

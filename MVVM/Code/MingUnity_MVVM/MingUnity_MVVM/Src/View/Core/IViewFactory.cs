@@ -12,7 +12,7 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 创建视图
         /// </summary>
-        void Create<T>(IViewModel viewModel, Transform parent = null, Action<string> callback = null) where T : class, IView;
+        void Create<T, V>(Transform parent = null, Action<string> callback = null) where T : class, IView where V : class, IViewModel;
 
         /// <summary>
         /// 创建视图
