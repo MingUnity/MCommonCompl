@@ -5,3 +5,5 @@ Demo/EventHubDemo/Library
 Demo/EventHubDemo/Temp
 Demo/EventHubDemo/EventHubDemo.sln
 Demo/EventHubDemo/EventHubDemo.CSharp.csproj
+Demo/EventHubDemo/.vs
+Demo/EventHubDemo/EventHubDemo.csproj

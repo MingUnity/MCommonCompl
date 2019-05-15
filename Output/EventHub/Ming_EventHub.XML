@@ -19,6 +19,16 @@
             处理事件
             </summary>
         </member>
+        <member name="T:Ming.EventHub.MEventArgs">
+            <summary>
+            通用事件参数
+            </summary>
+        </member>
+        <member name="P:Ming.EventHub.MEventArgs.Args">
+            <summary>
+            参数集
+            </summary>
+        </member>
         <member name="T:Ming.EventHub.MEventHub">
             <summary>
             事件处理中心
