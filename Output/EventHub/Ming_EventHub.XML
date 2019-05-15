@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ming_EventHub</name>
+    </assembly>
+    <members>
+        <member name="T:Ming.EventHub.IEventArgs">
+            <summary>
+            事件参数
+            </summary>
+        </member>
+        <member name="T:Ming.EventHub.IEventListener">
+            <summary>
+            事件监听
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.IEventListener.HandleEvent(System.Int32,Ming.EventHub.IEventArgs)">
+            <summary>
+            处理事件
+            </summary>
+        </member>
+        <member name="T:Ming.EventHub.MEventHub">
+            <summary>
+            事件处理中心
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.MEventHub.AddListener(System.Int32,Ming.EventHub.IEventListener)">
+            <summary>
+            添加监听
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.MEventHub.RemoveListener(System.Int32,Ming.EventHub.IEventListener)">
+            <summary>
+            移除监听
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.MEventHub.Dispatch(System.Int32,Ming.EventHub.IEventArgs)">
+            <summary>
+            分发
+            </summary>
+        </member>
+    </members>
+</doc>
