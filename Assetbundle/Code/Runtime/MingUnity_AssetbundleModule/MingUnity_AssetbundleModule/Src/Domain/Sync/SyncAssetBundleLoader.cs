@@ -81,7 +81,7 @@ namespace MingUnity.AssetbundleModule
 
             try
             {
-                if (!string.IsNullOrEmpty(abPath) && File.Exists(abPath))
+                if (!string.IsNullOrEmpty(abPath))
                 {
                     result = AssetBundle.LoadFromFile(abPath);
                 }
