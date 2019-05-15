@@ -78,7 +78,7 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 销毁
         /// </summary>
-        protected abstract void Release();
+        protected virtual void Release() { }
 
         /// <summary>
         /// 视图模型属性改变
