@@ -9,6 +9,21 @@
             数据模型接口
             </summary>
         </member>
+        <member name="T:MingUnity.MVVM.ViewModel.SimpleViewModel">
+            <summary>
+            简单视图模型
+            </summary>
+        </member>
+        <member name="P:MingUnity.MVVM.ViewModel.SimpleViewModel.Active">
+            <summary>
+            激活
+            </summary>
+        </member>
+        <member name="M:MingUnity.MVVM.ViewModel.SimpleViewModel.Setup">
+            <summary>
+            装载
+            </summary>
+        </member>
         <member name="T:MingUnity.MVVM.ViewModel.ViewModelBase`1">
             <summary>
             视图模型基类

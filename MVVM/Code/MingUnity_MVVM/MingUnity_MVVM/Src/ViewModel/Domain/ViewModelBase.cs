@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using MingUnity.MVVM.Model;
 
 namespace MingUnity.MVVM.ViewModel
