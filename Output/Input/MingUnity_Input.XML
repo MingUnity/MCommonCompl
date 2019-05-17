@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MingUnity_Input</name>
+    </assembly>
+    <members>
+        <member name="T:MingUnity.InputModule.MInput">
+            <summary>
+            核心输入组件
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnCancel">
+            <summary>
+            Occurs when The system cancelled tracking for the touch, as when (for example) the user puts the device to her face.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnCancel2Fingers">
+            <summary>
+            Occurs when the touch count is no longer egal to 2 and different to 0, after the begining of a two fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTouchStart">
+            <summary>
+            Occurs when a finger touched the screen.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTouchDown">
+            <summary>
+            Occurs as the touch is active.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTouchUp">
+            <summary>
+            Occurs when a finger was lifted from the screen.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSimpleTap">
+            <summary>
+            Occurs when a finger was lifted from the screen, and the time elapsed since the beginning of the touch is less than the time required for the detection of a long tap.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDoubleTap">
+            <summary>
+            Occurs when the number of taps is egal to 2 in a short time.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnLongTapStart">
+            <summary>
+            Occurs when a finger is touching the screen,  but hasn't moved  since the time required for the detection of a long tap.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnLongTap">
+            <summary>
+            Occurs as the touch is active after a LongTapStart
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnLongTapEnd">
+            <summary>
+            Occurs when a finger was lifted from the screen, and the time elapsed since the beginning of the touch is more than the time required for the detection of a long tap.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDragStart">
+            <summary>
+            Occurs when a drag start. A drag is a swipe on a pickable object
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDrag">
+            <summary>
+            Occurs as the drag is active.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDragEnd">
+            <summary>
+            Occurs when a finger that raise the drag event , is lifted from the screen.
+            </summary>/
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSwipeStart">
+            <summary>
+            Occurs when swipe start.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSwipe">
+            <summary>
+            Occurs as the  swipe is active.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSwipeEnd">
+            <summary>
+            Occurs when a finger that raise the swipe event , is lifted from the screen.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTouchStart2Fingers">
+            <summary>
+            Like OnTouchStart but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTouchDown2Fingers">
+            <summary>
+            Like OnTouchDown but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTouchUp2Fingers">
+            <summary>
+            Like OnTouchUp but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSimpleTap2Fingers">
+            <summary>
+            Like OnSimpleTap but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDoubleTap2Fingers">
+            <summary>
+            Like OnDoubleTap but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnLongTapStart2Fingers">
+            <summary>
+            Like OnLongTapStart but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnLongTap2Fingers">
+            <summary>
+            Like OnLongTap but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnLongTapEnd2Fingers">
+            <summary>
+            Like OnLongTapEnd but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTwist">
+            <summary>
+            Occurs when a twist gesture start
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnTwistEnd">
+            <summary>
+            Occurs as the twist gesture is active.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnPinch">
+            <summary>
+            Occurs as the pinch  gesture is active.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnPinchIn">
+            <summary>
+            Occurs as the pinch in gesture is active.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnPinchOut">
+            <summary>
+            Occurs as the pinch out gesture is active.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnPinchEnd">
+            <summary>
+            Occurs when the 2 fingers that raise the pinch event , are lifted from the screen.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDragStart2Fingers">
+            <summary>
+            Like OnDragStart but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDrag2Fingers">
+            <summary>
+            Like OnDrag but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnDragEnd2Fingers">
+            <summary>
+            Like OnDragEnd2Fingers but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSwipeStart2Fingers">
+            <summary>
+            Like OnSwipeStart but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSwipe2Fingers">
+            <summary>
+            Like OnSwipe but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnSwipeEnd2Fingers">
+            <summary>
+            Like OnSwipeEnd but for a 2 fingers gesture.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnMInputIsReady">
+            <summary>
+            Occurs when  input is ready.
+            </summary>
+        </member>
+        <member name="E:MingUnity.InputModule.MInput.OnOverUIElement">
+            <summary>
+            Occurs when current touch is over user interface element.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:MingUnity.InputModule.MInput.SwipeDirection" -->
+        <member name="T:MingUnity.InputModule.MGesture">
+            <summary>
+            This is the class passed as parameter by MInput events, that containing all informations about the touch that raise the event,
+            or by the tow fingers gesture that raise the event.
+            </summary>
+        </member>
+        <member name="F:MingUnity.InputModule.MGesture.swipe">
+            <summary>
+            The siwpe or drag  type ( None, Left, Right, Up, Down, Other => look at EayTouch.SwipeType enumeration).
+            </summary>
+        </member>
+        <member name="F:MingUnity.InputModule.MGesture.swipeLength">
+            <summary>
+            The length of the swipe.
+            </summary>
+        </member>
+        <member name="F:MingUnity.InputModule.MGesture.swipeVector">
+            <summary>
+            The swipe vector direction.
+            </summary>
+        </member>
+        <member name="F:MingUnity.InputModule.MGesture.deltaPinch">
+            <summary>
+            The pinch length delta since last change.
+            </summary>
+        </member>
+        <member name="F:MingUnity.InputModule.MGesture.twistAngle">
+            <summary>
+            The angle of the twist.
+            </summary>
+        </member>
+        <member name="F:MingUnity.InputModule.MGesture.twoFingerDistance">
+            <summary>
+            The distance between two finger for a two finger gesture.
+            </summary>
+        </member>
+        <member name="M:MingUnity.InputModule.MGesture.GetTouchToWorldPoint(System.Single)">
+            <summary>
+            Transforms touch position into world space, or the center position between the two touches for a two fingers gesture.
+            </summary>
+            <returns>
+            The touch to wordl point.
+            </returns>
+            <param name='z'>
+            The z position in world units from the camera or in world depending on worldZ value
+            </param>
+            <param name='worldZ'>
+            true = r
+            </param>
+            
+        </member>
+        <member name="M:MingUnity.InputModule.MGesture.GetSwipeOrDragAngle">
+            <summary>
+            Gets the swipe or drag angle. (calculate from swipe Vector)
+            </summary>
+            <returns>
+            Float : The swipe or drag angle.
+            </returns>
+        </member>
+        <member name="M:MingUnity.InputModule.MGesture.NormalizedPosition">
+            <summary>
+            Normalizeds the position.
+            </summary>
+            <returns>
+            The position.
+            </returns>
+        </member>
+        <member name="M:MingUnity.InputModule.MGesture.IsOverUIElement">
+            <summary>
+            Determines whether this instance is over user interface element.
+            </summary>
+            <returns><c>true</c> if this instance is over user interface element; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:MingUnity.InputModule.MGesture.IsOverRectTransform(UnityEngine.RectTransform,UnityEngine.Camera)">
+            <summary>
+            Determines whether this instance is over rect transform the specified tr camera.
+            </summary>
+            <returns><c>true</c> if this instance is over rect transform the specified tr camera; otherwise, <c>false</c>.</returns>
+            <param name="tr">Tr.</param>
+            <param name="camera">Camera.</param>
+        </member>
+        <member name="M:MingUnity.InputModule.MGesture.GetCurrentFirstPickedUIElement(System.Boolean)">
+            <summary>
+            Gets the first picked user interface element.
+            </summary>
+            <returns>The first picked user interface element.</returns>
+        </member>
+        <member name="M:MingUnity.InputModule.MGesture.GetCurrentPickedObject(System.Boolean)">
+            <summary>
+            Gets the current picked object.
+            </summary>
+            <returns>The current picked object.</returns>
+        </member>
+    </members>
+</doc>
