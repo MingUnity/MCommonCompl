@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using MingUnity.FaceRec;
+﻿using MingUnity.FaceRec;
 using System.IO;
+using UnityEngine;
 
 public class Main : MonoBehaviour
 {

@@ -7,6 +7,8 @@ namespace MingUnity.MVVM.ViewModel
     /// </summary>
     public sealed class SimpleViewModel : ViewModelBase<IModel>
     {
+        private bool _active; 
+
         /// <summary>
         /// 激活
         /// </summary>

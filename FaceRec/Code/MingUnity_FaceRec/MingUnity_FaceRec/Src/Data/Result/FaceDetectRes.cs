@@ -60,6 +60,11 @@ namespace MingUnity.FaceRec
                 public double age;
 
                 /// <summary>
+                /// 性别
+                /// </summary>
+                public Gender gender;
+
+                /// <summary>
                 /// 美丑打分
                 /// 范围[0,100]，越大表示越美
                 /// </summary>
@@ -80,6 +85,22 @@ namespace MingUnity.FaceRec
                 /// 72个特征点
                 /// </summary>
                 public Vector2[] landmark72;
+
+                /// <summary>
+                /// 性别
+                /// </summary>
+                public class Gender
+                {
+                    /// <summary>
+                    /// male:男性 female:女性
+                    /// </summary>
+                    public string type;
+
+                    /// <summary>
+                    /// 性别置信度，范围[0,1]，0代表概率最小、1代表最大
+                    /// </summary>
+                    public double probability;
+                }
 
                 /// <summary>
                 /// 区域信息

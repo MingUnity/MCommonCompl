@@ -84,7 +84,7 @@ namespace MingUnity.FaceRec
 
                     Dictionary<string, object> options = new Dictionary<string, object>();
 
-                    options.Add("face_field", "age,beauty,quality,landmark");
+                    options.Add("face_field", "age,beauty,gender,quality,landmark");
 
                     JObject result = _faceClient?.Detect(base64Image, imageType, options);
 

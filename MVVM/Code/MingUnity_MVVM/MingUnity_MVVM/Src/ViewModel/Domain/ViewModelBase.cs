@@ -14,11 +14,6 @@ namespace MingUnity.MVVM.ViewModel
         protected T _model;
 
         /// <summary>
-        /// 激活
-        /// </summary>
-        protected bool _active;
-
-        /// <summary>
         /// 数据模型
         /// </summary>
         public T Model
