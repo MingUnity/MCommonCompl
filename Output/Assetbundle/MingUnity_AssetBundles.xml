@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MingUnity_AssetBundles</name>
+    </assembly>
+    <members>
+        <member name="T:MingUnity.AssetBundles.IAssetBundlesLoader">
+            <summary>
+            AB包加载接口
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.IAssetBundlesLoader.GetAsset``1(System.String,System.String)">
+            <summary>
+            获取资源
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.IAssetBundlesLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
+            <summary>
+            异步获取资源
+            </summary>
+        </member>
+        <member name="T:MingUnity.AssetBundles.AssetBundleTask">
+            <summary>
+            AB包任务
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.AssetBundleTask._loadTask">
+            <summary>
+            加载任务
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.AssetBundleTask._assetbundle">
+            <summary>
+            AB包
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.AssetBundleTask._cacheCallback">
+            <summary>
+            回调缓存
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.AssetBundleTask._loading">
+            <summary>
+            加载中标识
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.Load(System.String,System.Boolean,System.Action{UnityEngine.AssetBundle})">
+            <summary>
+            加载
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.UnLoad(System.Boolean)">
+            <summary>
+            卸载
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.LoadABAsync(System.String,System.Action{UnityEngine.AssetBundle})">
+            <summary>
+            异步加载AB包
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.InvokeCache">
+            <summary>
+            执行缓存动作
+            </summary>
+        </member>
+        <member name="T:MingUnity.AssetBundles.AssetBundlesLoader">
+            <summary>
+            AB包加载
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetAsset``1(System.String,System.String)">
+            <summary>
+            获取资源
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
+            <summary>
+            异步获取资源
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetTask(System.String)">
+            <summary>
+            获取任务
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetAssetAsync(UnityEngine.AssetBundle,System.String,System.Action{UnityEngine.Object})">
+            <summary>
+            异步获取资源
+            </summary>
+        </member>
+        <member name="P:MingUnity.AssetBundles.Task.Running">
+            Returns true if and only if the coroutine is running.  Paused tasks  
+            are considered to be running.  
+        </member>
+        <member name="P:MingUnity.AssetBundles.Task.Paused">
+            Returns true if and only if the coroutine is currently paused.  
+        </member>
+        <member name="T:MingUnity.AssetBundles.Task.FinishedHandler">
+            Delegate for termination subscribers.  manual is true if and only if  
+            the coroutine was stopped with an explicit call to Stop().  
+        </member>
+        <member name="E:MingUnity.AssetBundles.Task.Finished">
+            Termination event.  Triggered when the coroutine completes execution.  
+        </member>
+        <member name="M:MingUnity.AssetBundles.Task.#ctor(System.Collections.IEnumerator,System.Boolean)">
+            Creates a new Task object for the given coroutine.  
+             
+            If autoStart is true (default) the task is automatically started  
+            upon construction.  
+        </member>
+        <member name="M:MingUnity.AssetBundles.Task.Start">
+            Begins execution of the coroutine  
+        </member>
+        <member name="M:MingUnity.AssetBundles.Task.Stop">
+            Discontinues execution of the coroutine at its next yield.  
+        </member>
+        <member name="T:MingUnity.AssetBundles.TaskQueue">
+            <summary>
+            任务队列
+            在某个时间点最多只有一个协程在执行，先加入队列中的先执行，后加入的后执行
+            </summary>
+        </member>
+    </members>
+</doc>

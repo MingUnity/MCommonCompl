@@ -237,13 +237,16 @@
     <Reference Include="MingUnity_AssetbundleModule">
       <HintPath>Assets\Plugins\MingUnity_AssetbundleModule.dll</HintPath>
     </Reference>
+    <Reference Include="MingUnity_AssetBundles">
+      <HintPath>Assets\Plugins\MingUnity_AssetBundles.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Main.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\Editor\MingUnity_AssetbundleEditor.xml" />
-    <None Include="Assets\Plugins\MingUnity_AssetbundleModule.xml" />
+    <None Include="Assets\Plugins\MingUnity_AssetbundleModule.XML" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
