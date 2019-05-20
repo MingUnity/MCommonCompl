@@ -5,7 +5,7 @@ namespace MingUnity.AssetBundles
     /// <summary>
     /// AB包加载接口
     /// </summary>
-    public interface IAssetBundlesLoader
+    public interface IAssetBundleLoader
     {
         /// <summary>
         /// 获取资源

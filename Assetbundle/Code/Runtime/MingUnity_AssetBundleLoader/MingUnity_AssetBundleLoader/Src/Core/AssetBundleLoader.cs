@@ -9,7 +9,7 @@ namespace MingUnity.AssetBundles
     /// <summary>
     /// AB包加载
     /// </summary>
-    public class AssetBundlesLoader : IAssetBundlesLoader
+    public class AssetBundleLoader : IAssetBundleLoader
     {
         private Dictionary<string, AssetBundleTask> _taskDic = new Dictionary<string, AssetBundleTask>();
 

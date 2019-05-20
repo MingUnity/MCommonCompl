@@ -4,19 +4,29 @@
         <name>MingUnity_AssetBundles</name>
     </assembly>
     <members>
-        <member name="T:MingUnity.AssetBundles.IAssetBundlesLoader">
+        <member name="T:MingUnity.AssetBundles.IAssetBundleLoader">
             <summary>
             AB包加载接口
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.IAssetBundlesLoader.GetAsset``1(System.String,System.String)">
+        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.GetAsset``1(System.String,System.String)">
             <summary>
             获取资源
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.IAssetBundlesLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
+        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
             <summary>
             异步获取资源
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.Unload(System.String,System.Boolean)">
+            <summary>
+            卸载
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.UnloadAll(System.Boolean)">
+            <summary>
+            卸载全部
             </summary>
         </member>
         <member name="T:MingUnity.AssetBundles.AssetBundleTask">
@@ -49,7 +59,7 @@
             加载
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundleTask.UnLoad(System.Boolean)">
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.Unload(System.Boolean)">
             <summary>
             卸载
             </summary>
@@ -64,29 +74,44 @@
             执行缓存动作
             </summary>
         </member>
-        <member name="T:MingUnity.AssetBundles.AssetBundlesLoader">
+        <member name="T:MingUnity.AssetBundles.AssetBundleLoader">
             <summary>
             AB包加载
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetAsset``1(System.String,System.String)">
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAsset``1(System.String,System.String)">
             <summary>
             获取资源
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
             <summary>
             异步获取资源
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetTask(System.String)">
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetTask(System.String)">
             <summary>
             获取任务
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundlesLoader.GetAssetAsync(UnityEngine.AssetBundle,System.String,System.Action{UnityEngine.Object})">
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAssetAsync(UnityEngine.AssetBundle,System.String,System.Action{UnityEngine.Object})">
             <summary>
             异步获取资源
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.Unload(System.String,System.Boolean)">
+            <summary>
+            卸载
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.UnloadAll(System.Boolean)">
+            <summary>
+            卸载全部
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAbKey(System.String)">
+            <summary>
+            获取AB包key值 
             </summary>
         </member>
         <member name="P:MingUnity.AssetBundles.Task.Running">

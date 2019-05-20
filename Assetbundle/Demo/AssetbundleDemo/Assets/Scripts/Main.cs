@@ -9,11 +9,11 @@ public class Main : MonoBehaviour
 {
     public Transform canvas;
 
-    private IAssetBundlesLoader _abLoader;
+    private IAssetBundleLoader _abLoader;
 
     private void Start()
     {
-        _abLoader = new AssetBundlesLoader();
+        _abLoader = new AssetBundleLoader();
 
     }
 

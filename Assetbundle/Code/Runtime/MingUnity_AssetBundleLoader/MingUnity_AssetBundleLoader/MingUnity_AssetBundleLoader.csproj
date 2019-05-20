@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Src\Core\IAssetBundlesLoader.cs" />
+    <Compile Include="Src\Core\IAssetBundleLoader.cs" />
     <Compile Include="Src\Core\AssetBundleTask.cs" />
-    <Compile Include="Src\Core\AssetBundlesLoader.cs" />
+    <Compile Include="Src\Core\AssetBundleLoader.cs" />
     <Compile Include="Src\Utility\TaskManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
