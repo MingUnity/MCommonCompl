@@ -114,6 +114,11 @@
             销毁
             </summary>
         </member>
+        <member name="M:MingUnity.MVVM.View.ViewBase`1.SyncModel">
+            <summary>
+            同步数据模型
+            </summary>
+        </member>
         <member name="M:MingUnity.MVVM.View.ViewBase`1.ViewModelPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
             <summary>
             视图模型属性改变

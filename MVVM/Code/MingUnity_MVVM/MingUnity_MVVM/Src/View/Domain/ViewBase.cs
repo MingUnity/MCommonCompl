@@ -40,6 +40,8 @@ namespace MingUnity.MVVM.View
                 {
                     _viewModel = value as T;
 
+                    SyncModel();
+
                     _viewModel.PropertyChanged += ViewModelPropertyChanged;
 
                     _viewModel.Setup();
@@ -79,6 +81,11 @@ namespace MingUnity.MVVM.View
         /// 销毁
         /// </summary>
         protected virtual void Release() { }
+
+        /// <summary>
+        /// 同步数据模型
+        /// </summary>
+        protected virtual void SyncModel() { }
 
         /// <summary>
         /// 视图模型属性改变
