@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MingUnity_Common</name>
+    </assembly>
+    <members>
+        <member name="M:MingUnity.Common.Loom.Initialize">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="T:MingUnity.Common.MonoSingleton`1">
+            <summary>
+            Mono单例
+            </summary>
+        </member>
+        <member name="T:MingUnity.Common.Singleton`1">
+            <summary>
+            单例
+            </summary>
+        </member>
+    </members>
+</doc>
