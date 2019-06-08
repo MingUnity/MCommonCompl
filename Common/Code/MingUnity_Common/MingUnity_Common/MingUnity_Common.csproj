@@ -47,7 +47,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Src\Loom.cs" />
     <Compile Include="Src\MonoSingleton.cs" />
+    <Compile Include="Src\PlatformUtility.cs" />
     <Compile Include="Src\Singleton.cs" />
+    <Compile Include="Src\TaskManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
