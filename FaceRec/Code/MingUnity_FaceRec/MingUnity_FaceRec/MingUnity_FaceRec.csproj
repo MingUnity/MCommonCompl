@@ -21,7 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\Demo\FaceRecDemo\Assets\Plugins\MingUnity_FaceRec.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,9 +48,6 @@
     <Reference Include="System.Core">
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Drawing">
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq">
       <Private>False</Private>
     </Reference>
@@ -69,18 +67,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Src\Core\FaceDetect.cs" />
+    <Compile Include="Src\Core\Domain\FaceDetect.cs" />
     <Compile Include="Src\Core\FaceRecBase.cs" />
-    <Compile Include="Src\Core\IFaceDetect.cs" />
+    <Compile Include="Src\Core\Interface\IFaceDetect.cs" />
+    <Compile Include="Src\Core\Interface\IFaceSearch.cs" />
     <Compile Include="Src\Data\FaceAppData.cs" />
+    <Compile Include="Src\Data\Result\FaceSearchRes.cs" />
     <Compile Include="Src\Data\FaceUserData.cs" />
     <Compile Include="Src\Data\Result\FaceDetectRes.cs" />
     <Compile Include="Src\Data\Result\FaceResBase.cs" />
-    <Compile Include="Src\Core\FaceCompare.cs" />
+    <Compile Include="Src\Core\Domain\FaceSearch.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Src\Core\Interface\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

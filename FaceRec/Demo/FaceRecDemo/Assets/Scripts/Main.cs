@@ -6,11 +6,21 @@ public class Main : MonoBehaviour
 {
     private FaceDetect _faceDetect;
 
+    private FaceSearch _faceSearch;
+
     private string _faceNum;
+
+    private string _user;
+
+    private string _score;
 
     private void Start()
     {
-        _faceDetect = new FaceDetect(new FaceAppData("11253066", "WwnwTfmq9ulkzknDBOv9tr6s", "7DNbqdtYvhVr0nR8YMtbIUeFfwyCBVgc"));
+        FaceAppData faceAppData = new FaceAppData("11253066", "WwnwTfmq9ulkzknDBOv9tr6s", "7DNbqdtYvhVr0nR8YMtbIUeFfwyCBVgc");
+
+        _faceDetect = new FaceDetect(faceAppData);
+
+        _faceSearch = new FaceSearch("FaceRec", faceAppData);
     }
 
     private void OnGUI()
@@ -30,5 +40,25 @@ public class Main : MonoBehaviour
         }
 
         GUILayout.Label(_faceNum);
+
+        if (GUILayout.Button("FaceSearch"))
+        {
+            string imgPath = Path.Combine(Application.dataPath, "Resources/Test.jpg");
+
+            FaceSearchRes res = _faceSearch.Search(imgPath);
+
+            if (res != null)
+            {
+                _user = res.result.user_list[0].user_id;
+
+                float score = res.result.user_list[0].score;
+
+                _score = score.ToString();
+            }
+        }
+
+        GUILayout.Label(_user);
+
+        GUILayout.Label(_score);
     }
 }
