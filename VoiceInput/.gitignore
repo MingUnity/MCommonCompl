@@ -1,8 +1,8 @@
 Code/MingUnity_VoiceInput/.vs
 Code/MingUnity_VoiceInput/MingUnity_VoiceInput/bin
-Code/MingUnity_VoiceInput/MingUnity_VoiceInputobj
-Demo/VoiceInputDemo/.vs
+Code/MingUnity_VoiceInput/MingUnity_VoiceInput/obj
 Demo/VoiceInputDemo/Library
+Demo/VoiceInputDemo/.vs
 Demo/VoiceInputDemo/Temp
-Demo/VoiceInputDemo/VoiceInputDemo.CSharp.csproj
 Demo/VoiceInputDemo/VoiceInputDemo.sln
+Demo/VoiceInputDemo/VoiceInputDemo.CSharp.csproj

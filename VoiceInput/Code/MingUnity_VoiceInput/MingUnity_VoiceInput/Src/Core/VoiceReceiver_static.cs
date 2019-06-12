@@ -51,6 +51,17 @@ namespace MingUnity.VoiceInput
         }
 
         /// <summary>
+        /// 默认接收器
+        /// </summary>
+        public static VoiceReceiver Default
+        {
+            get
+            {
+                return Get(-1);
+            }
+        }
+
+        /// <summary>
         /// 获取声音接收器
         /// </summary>
         public static VoiceReceiver Get(int index)
@@ -62,7 +73,7 @@ namespace MingUnity.VoiceInput
             if (result == null)
             {
                 result = new VoiceReceiver(index);
-                
+
                 if (_voiceReceiverDic != null)
                 {
                     _voiceReceiverDic[index] = result;
