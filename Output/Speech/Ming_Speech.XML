@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ming_Speech</name>
+    </assembly>
+    <members>
+        <member name="T:Ming.Speech.SpeechGenerator">
+            <summary>
+            简单语音合成
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.Speaker">
+            <summary>
+            发音人
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.TTSParam">
+            <summary>
+            语音合成参数
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.TTSParam.speed">
+            <summary>
+            语速
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.TTSParam.pit">
+            <summary>
+            音调
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.TTSParam.vol">
+            <summary>
+            音量
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.TTSParam.speaker">
+            <summary>
+            发音人
+            </summary>
+        </member>
+        <member name="P:Ming.Speech.TTSParam.IsValid">
+            <summary>
+            可用
+            </summary>
+        </member>
+        <member name="M:Ming.Speech.ISpeechRec.SpeechRec(System.String)">
+            <summary>
+            语音识别
+            </summary>
+            <param name="filePath">语音文件路径</param>
+            <returns>语音识别结果</returns>
+        </member>
+        <member name="M:Ming.Speech.ISpeechRec.AsyncSpeechRec(System.Byte[],System.Action{Ming.Speech.SpeechRecRes})">
+            <summary>
+            异步语音识别
+            </summary>
+            <param name="data">语音二进制数据</param>
+            <param name="callback">语音结果回调</param>
+        </member>
+        <member name="M:Ming.Speech.ISpeechRec.AsyncSpeechRec(System.String,System.Action{Ming.Speech.SpeechRecRes})">
+            <summary>
+            异步语音识别
+            </summary>
+            <param name="filePath">语音文件路径</param>
+            <param name="callback">语音结果回调</param>
+        </member>
+        <member name="T:Ming.Speech.SpeechRecer">
+            <summary>
+            语音识别
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.RecType">
+            <summary>
+            识别类型
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.RecType.ChineseAndSimpleEnglish">
+            <summary>
+            普通话(支持简单的英文识别) 无标点
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.RecType.Chinese">
+            <summary>
+            普通话(纯中文识别) 有标点
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.RecType.English">
+            <summary>
+            英语 无标点
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.RecType.Cantonese">
+            <summary>
+            粤语 有标点
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.RecType.Sichuan">
+            <summary>
+            四川话 有标点
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.RecType.LongChinese">
+            <summary>
+            普通话远场 有标点
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.ISpeechGenerator">
+            <summary>
+            语音合成
+            </summary>
+        </member>
+        <member name="M:Ming.Speech.ISpeechGenerator.AsyncSpeechGenrate(System.String,System.Action{System.Byte[]})">
+            <summary>
+            异步合成
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.ISpeechRecHandler">
+            <summary>
+            语音识别接口
+            </summary>
+        </member>
+        <member name="M:Ming.Speech.ISpeechRecHandler.SpeechRec(System.Byte[])">
+            <summary>
+            语音识别
+            </summary>
+            <param name="data">语音二进制数据</param>
+            <returns>语音识别结果</returns>
+        </member>
+        <member name="T:Ming.Speech.SpeechBase">
+            <summary>
+            语音基类
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.SpeechForamt">
+            <summary>
+            语音格式
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.SpeechAppData">
+            <summary>
+            语音识别应用数据
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechAppData.appId">
+            <summary>
+            app id
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechAppData.apiKey">
+            <summary>
+            api key 
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechAppData.secretKey">
+            <summary>
+            secret key
+            </summary>
+        </member>
+        <member name="T:Ming.Speech.SpeechRecRes">
+            <summary>
+            语音识别结果
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechRecRes.err_no">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechRecRes.err_msg">
+            <summary>
+            错误码描述
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechRecRes.corpus_no">
+            <summary>
+            语料库
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechRecRes.sn">
+            <summary>
+            语音数据唯一标识，系统内部产生，用于 debug
+            </summary>
+        </member>
+        <member name="F:Ming.Speech.SpeechRecRes.result">
+            <summary>
+            识别结果数组，提供多个候选结果，无论返回多少个请取第一个
+            </summary>
+        </member>
+    </members>
+</doc>

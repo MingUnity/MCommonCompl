@@ -28,8 +28,7 @@ namespace Ming.Speech
                     break;
 
                 case SpeechForamt.MP3:
-                    _handler = new MP3SpeechRec(appData,(int)recType);
-                    break;
+                    throw new NotImplementedException("<Ming> ## Uni Exception ## Cls:SpeechRecer Func:SpeechRecer Info: don't support mp3");
             }
         }
 

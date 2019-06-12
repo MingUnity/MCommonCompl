@@ -29,6 +29,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Output\Speech\Ming_Speech.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BaiduAip">
@@ -48,17 +49,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Src\Core\SpeechConvert\SpeechConverter.cs" />
-    <Compile Include="Src\Core\SpeechGenerater\SimpleSpeechGenerater.cs" />
+    <Compile Include="Src\Core\SpeechGenerator\ISpeechGenerateHandler.cs" />
+    <Compile Include="Src\Core\SpeechGenerator\MP3SpeechGenerator.cs" />
+    <Compile Include="Src\Core\SpeechGenerator\SpeechGenerator.cs" />
     <Compile Include="Src\Core\SpeechRec\ISpeechRec.cs" />
-    <Compile Include="Src\Core\SpeechRec\MP3SpeechRec.cs" />
     <Compile Include="Src\Core\SpeechRec\SpeechRecer.cs" />
     <Compile Include="Src\Core\SpeechRec\CommonSpeechRec.cs" />
-    <Compile Include="Src\Core\SpeechGenerater\ISpeechGenerater.cs" />
+    <Compile Include="Src\Core\SpeechGenerator\ISpeechGenerator.cs" />
     <Compile Include="Src\Core\SpeechRec\ISpeechRecHandler.cs" />
     <Compile Include="Src\Core\SpeechBase.cs" />
     <Compile Include="Src\Data\SpeechAppData.cs" />
-    <Compile Include="Src\Data\SpeechGenerateRes.cs" />
     <Compile Include="Src\Data\SpeechRecRes.cs" />
   </ItemGroup>
   <ItemGroup />

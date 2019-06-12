@@ -5,7 +5,7 @@ namespace Ming.Speech
 {
     internal class CommonSpeechRec : ISpeechRecHandler
     {
-        private Asr _speechClient;
+        private Asr _asr;
 
         private string _speechFormat;
 
@@ -13,7 +13,7 @@ namespace Ming.Speech
         
         public CommonSpeechRec(SpeechAppData appData, string format,int devPid)
         {
-            _speechClient = new Asr(appData.appId, appData.apiKey, appData.secretKey);
+            _asr = new Asr(appData.appId, appData.apiKey, appData.secretKey);
 
             this._speechFormat = format;
 
@@ -26,7 +26,7 @@ namespace Ming.Speech
 
             if (data != null)
             {
-                JObject result = _speechClient.Recognize(data, _speechFormat, 16000);
+                JObject result = _asr.Recognize(data, _speechFormat, 16000);
 
                 res = result?.ToObject<SpeechRecRes>();
             }
