@@ -40,11 +40,11 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEditor">
-      <HintPath>..\..\..\..\..\..\JMCompl\ThirdLib\UnityEditor.dll</HintPath>
+      <HintPath>..\..\..\..\..\ThirdLib\UnityEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\..\JMCompl\ThirdLib\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\ThirdLib\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
