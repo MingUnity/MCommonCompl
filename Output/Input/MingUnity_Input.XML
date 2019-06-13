@@ -199,7 +199,7 @@
             Occurs when current touch is over user interface element.
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:MingUnity.InputModule.MInput.SwipeDirection" -->
+        <!-- 对于成员“T:MingUnity.InputModule.MInput.SwipeDirection”忽略有格式错误的 XML 注释 -->
         <member name="T:MingUnity.InputModule.MGesture">
             <summary>
             This is the class passed as parameter by MInput events, that containing all informations about the touch that raise the event,

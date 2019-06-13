@@ -21,14 +21,6 @@
             </summary>
             <param name="texture">图片纹理</param>
         </member>
-        <member name="M:MingUnity.FaceRec.FaceDetect.Detect(UnityEngine.Color32[],System.Int32,System.Int32)">
-            <summary>
-            人脸检测
-            </summary>
-            <param name="colors">像素颜色数组</param>
-            <param name="width">图片宽</param>
-            <param name="height">图片高</param>
-        </member>
         <member name="M:MingUnity.FaceRec.FaceDetect.Detect(System.Byte[])">
             <summary>
             人脸检测
@@ -43,16 +35,6 @@
         <member name="M:MingUnity.FaceRec.FaceDetect.AsyncDetect(System.Byte[],System.Action{MingUnity.FaceRec.FaceDetectRes})">
             <summary>
             异步人脸检测
-            </summary>
-        </member>
-        <member name="M:MingUnity.FaceRec.FaceDetect.AsyncDetect(UnityEngine.Color32[],System.Int32,System.Int32,System.Action{MingUnity.FaceRec.FaceDetectRes})">
-            <summary>
-            异步人脸检测
-            </summary>
-        </member>
-        <member name="M:MingUnity.FaceRec.FaceDetect.Color32ArrayToImageBuffer(UnityEngine.Color32[],System.Int32,System.Int32)">
-            <summary>
-            像素颜色数组转图片二进制数据
             </summary>
         </member>
         <member name="T:MingUnity.FaceRec.FaceRecBase">
@@ -82,12 +64,6 @@
             </summary>
             <param name="texture">图片纹理</param>
         </member>
-        <member name="M:MingUnity.FaceRec.IFaceDetect.Detect(UnityEngine.Color32[],System.Int32,System.Int32)">
-            <summary>
-            检测
-            </summary>
-            <param name="colors">像素颜色数组</param>        
-        </member>
         <member name="M:MingUnity.FaceRec.IFaceDetect.Detect(System.Byte[])">
             <summary>
             检测
@@ -104,7 +80,30 @@
             异步检测
             </summary>
         </member>
-        <member name="M:MingUnity.FaceRec.IFaceDetect.AsyncDetect(UnityEngine.Color32[],System.Int32,System.Int32,System.Action{MingUnity.FaceRec.FaceDetectRes})">
+        <member name="M:MingUnity.FaceRec.IFaceSearch.Search(System.String)">
+            <summary>
+            搜索
+            </summary>
+            <param name="imagePath">图片本地路径</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceSearch.Search(UnityEngine.Texture2D)">
+            <summary>
+            检测
+            </summary>
+            <param name="texture">图片纹理</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceSearch.Search(System.Byte[])">
+            <summary>
+            检测
+            </summary>
+            <param name="imageBytes">图片源数据</param>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceSearch.AsyncSearch(System.String,System.Action{MingUnity.FaceRec.FaceSearchRes})">
+            <summary>
+            异步检测
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.IFaceSearch.AsyncSearch(System.Byte[],System.Action{MingUnity.FaceRec.FaceSearchRes})">
             <summary>
             异步检测
             </summary>
@@ -127,6 +126,41 @@
         <member name="F:MingUnity.FaceRec.FaceAppData.secretKey">
             <summary>
             secret key
+            </summary>
+        </member>
+        <member name="T:MingUnity.FaceRec.FaceSearchRes">
+            <summary>
+            人脸搜索结果
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceSearchRes.result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceSearchRes.Result.user_list">
+            <summary>
+            用户列表
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceSearchRes.Result.User.group_id">
+            <summary>
+            组Id
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceSearchRes.Result.User.user_id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceSearchRes.Result.User.user_info">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="F:MingUnity.FaceRec.FaceSearchRes.Result.User.score">
+            <summary>
+            相似度
             </summary>
         </member>
         <member name="T:MingUnity.FaceRec.FaceUserData">
@@ -395,9 +429,40 @@
             缓存
             </summary>
         </member>
-        <member name="T:MingUnity.FaceRec.FaceCompare">
+        <member name="T:MingUnity.FaceRec.FaceSearch">
             <summary>
-            人脸对比
+            人脸搜索
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceSearch.Search(System.String)">
+            <summary>
+            人脸搜索
+            </summary>
+            <param name="imagePath">本地图片地址</param>        
+            <param name="groupIdList">从指定的group中进行查找</param>        
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceSearch.Search(UnityEngine.Texture2D)">
+            <summary>
+            人脸搜索
+            </summary>
+            <param name="texture">图片Texture</param>
+            <param name="groupIdList">从指定的group中进行查找</param>        
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceSearch.Search(System.Byte[])">
+            <summary>
+            人脸搜索
+            </summary>
+            <param name="imageBytes">图片byte数组</param>
+            <param name="groupIdList">从指定的group中进行查找</param>        
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceSearch.AsyncSearch(System.String,System.Action{MingUnity.FaceRec.FaceSearchRes})">
+            <summary>
+            异步人脸搜索
+            </summary>
+        </member>
+        <member name="M:MingUnity.FaceRec.FaceSearch.AsyncSearch(System.Byte[],System.Action{MingUnity.FaceRec.FaceSearchRes})">
+            <summary>
+            异步人脸搜索
             </summary>
         </member>
     </members>

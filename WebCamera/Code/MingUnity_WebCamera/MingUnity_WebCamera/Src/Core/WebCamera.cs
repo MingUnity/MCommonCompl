@@ -318,31 +318,24 @@ namespace MingUnity.WebCamera
             {
                 if (_camTex != null)
                 {
-                    if (_camTex.isPlaying)
+                    Color[] colors = _camTex.GetPixels();
+
+                    int width = _camTex.width;
+
+                    int height = _camTex.height;
+
+                    if (_cacheTex == null)
                     {
-                        Color[] colors = _camTex.GetPixels();
-
-                        int width = _camTex.width;
-
-                        int height = _camTex.height;
-
-                        if (_cacheTex == null)
-                        {
-                            _cacheTex = new Texture2D(width, height);
-                        }
-                        else if (_cacheTex.width != width || _cacheTex.height != height)
-                        {
-                            _cacheTex.Resize(width, height);
-                        }
-
-                        _cacheTex.SetPixels(colors);
-
-                        _cacheTex.Apply();
+                        _cacheTex = new Texture2D(width, height);
                     }
-                    else
+                    else if (_cacheTex.width != width || _cacheTex.height != height)
                     {
-                        Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:Camera not opened", _camIndex);
+                        _cacheTex.Resize(width, height);
                     }
+
+                    _cacheTex.SetPixels(colors);
+
+                    _cacheTex.Apply();
                 }
             }
             catch (Exception e)
@@ -362,17 +355,7 @@ namespace MingUnity.WebCamera
 
             try
             {
-                if (_camTex != null)
-                {
-                    if (_camTex.isPlaying)
-                    {
-                        result = _camTex.GetPixels();
-                    }
-                    else
-                    {
-                        Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:Camera not opened", _camIndex);
-                    }
-                }
+                result = _camTex?.GetPixels();
             }
             catch (Exception e)
             {
@@ -391,17 +374,7 @@ namespace MingUnity.WebCamera
 
             try
             {
-                if (_camTex != null)
-                {
-                    if (_camTex.isPlaying)
-                    {
-                        result = _camTex.GetPixels32();
-                    }
-                    else
-                    {
-                        Debug.LogErrorFormat("<Ming> ## Uni Error ## Cls:WebCamera Func:Snapshot CamIndex:{0} Info:Camera not open", _camIndex);
-                    }
-                }
+                result = _camTex?.GetPixels32();
             }
             catch (Exception e)
             {
