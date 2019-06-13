@@ -31,5 +31,23 @@ namespace Ming.Speech
         /// 识别结果数组，提供多个候选结果，无论返回多少个请取第一个
         /// </summary>
         public List<string> result;
+
+        /// <summary>
+        /// 优先结果
+        /// </summary>
+        public string PriorResult
+        {
+            get
+            {
+                string res = string.Empty;
+
+                if (result != null && result.Count > 0)
+                {
+                    res = result[0];
+                }
+
+                return res;
+            }
+        }
     }
 }

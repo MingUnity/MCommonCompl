@@ -187,5 +187,10 @@
             识别结果数组，提供多个候选结果，无论返回多少个请取第一个
             </summary>
         </member>
+        <member name="P:Ming.Speech.SpeechRecRes.PriorResult">
+            <summary>
+            优先结果
+            </summary>
+        </member>
     </members>
 </doc>
