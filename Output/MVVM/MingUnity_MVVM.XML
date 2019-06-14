@@ -154,29 +154,9 @@
             创建视图
             </summary>
         </member>
-        <member name="M:MingUnity.MVVM.View.IViewFactory.GetViewModel(System.String)">
-            <summary>
-            获取视图模型
-            </summary>
-        </member>
-        <member name="M:MingUnity.MVVM.View.IViewFactory.Destroy(System.String)">
-            <summary>
-            销毁视图
-            </summary>
-        </member>
         <member name="T:MingUnity.MVVM.View.ViewFactory">
             <summary>
             视图工厂
-            </summary>
-        </member>
-        <member name="F:MingUnity.MVVM.View.ViewFactory._viewDic">
-            <summary>
-            视图字典
-            </summary>
-        </member>
-        <member name="P:MingUnity.MVVM.View.ViewFactory.Item(System.String)">
-            <summary>
-            视图索引
             </summary>
         </member>
         <member name="M:MingUnity.MVVM.View.ViewFactory.Create``2(UnityEngine.Transform,System.Action{System.String})">
@@ -187,16 +167,6 @@
         <member name="M:MingUnity.MVVM.View.ViewFactory.Create(MingUnity.MVVM.View.IView,MingUnity.MVVM.ViewModel.IViewModel,UnityEngine.Transform,System.Action{System.String})">
             <summary>
             创建视图
-            </summary>
-        </member>
-        <member name="M:MingUnity.MVVM.View.ViewFactory.GetViewModel(System.String)">
-            <summary>
-            获取视图模型
-            </summary>
-        </member>
-        <member name="M:MingUnity.MVVM.View.ViewFactory.Destroy(System.String)">
-            <summary>
-            销毁视图
             </summary>
         </member>
     </members>
