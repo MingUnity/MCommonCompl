@@ -1,13 +1,13 @@
-﻿using System;
-using MingUnity.MVVM.View;
+﻿using MingUnity.MVVM;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestView_02 : ViewBase<TestViewModel>
+public class TestView_02 : ViewBase
 {
     private Text _text;
 
-    public bool Active
+    public override bool Active
     {
         get
         {
@@ -19,13 +19,6 @@ public class TestView_02 : ViewBase<TestViewModel>
             }
 
             return res;
-        }
-        private set
-        {
-            if (_root != null)
-            {
-                _root.gameObject.SetActive(value);
-            }
         }
     }
 
@@ -51,7 +44,7 @@ public class TestView_02 : ViewBase<TestViewModel>
         }
     }
 
-    public override void Create(Transform parent, Action callback)
+    public override void Create(Transform parent, bool active, Action callback = null)
     {
         GameObject prefab = Resources.Load<GameObject>("TestView_02");
 
@@ -65,34 +58,51 @@ public class TestView_02 : ViewBase<TestViewModel>
             }
         }
 
+        SetActive(active);
+
         if (callback != null)
         {
             callback.Invoke();
         }
     }
 
-    protected override void PropertyChanged(string propertyName)
+    public override void Show(Action callback = null)
     {
-        if (!string.IsNullOrEmpty(propertyName))
-        {
-            switch (propertyName)
-            {
-                case "Active":
-                    Active = _viewModel.Active;
-                    break;
+        SetActive(true);
 
-                case "Text":
-                    Text = _viewModel.Text;
-                    break;
-            }
+        if (callback != null)
+        {
+            callback.Invoke();
         }
     }
 
-    protected override void Release()
+    public override void Hide(Action callback = null)
     {
-        if (_root != null)
+        SetActive(false);
+
+        if (callback != null)
         {
-            GameObject.DestroyImmediate(_root.gameObject);
+            callback.Invoke();
         }
+    }
+
+    protected override void ViewModelPropertyChanged(string propertyName, IPropertyChangedArgs args)
+    {
+        if (args == null)
+        {
+            return;
+        }
+
+        switch (propertyName)
+        {
+            case "Text":
+                Text = args.GetCValue<string>();
+                break;
+        }
+    }
+
+    private void SetActive(bool active)
+    {
+        _root.gameObject.SetActive(active);
     }
 }

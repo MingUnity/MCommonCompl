@@ -11,7 +11,7 @@ namespace MingUnity.FaceRec
         /// 结果
         /// </summary>
         public Result result;
-
+        
         public class Result
         {
             public string face_token;
@@ -20,7 +20,7 @@ namespace MingUnity.FaceRec
             /// 用户列表
             /// </summary>
             public List<User> user_list;
-
+            
             public class User
             {
                 /// <summary>

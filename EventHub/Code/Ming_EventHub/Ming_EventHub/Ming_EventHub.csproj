@@ -41,9 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\CommonEventArgs.cs" />
     <Compile Include="Src\IEventArgs.cs" />
     <Compile Include="Src\IEventListener.cs" />
-    <Compile Include="Src\MEventArgs.cs" />
+    <Compile Include="Src\SimpleEventArgs.cs" />
     <Compile Include="Src\MEventHub.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -21,7 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\Demo\MVVMDemo\Assets\Plugins\MingUnity_MVVM.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,14 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Src\Model\IModel.cs" />
-    <Compile Include="Src\ViewModel\Domain\SimpleViewModel.cs" />
-    <Compile Include="Src\ViewModel\Domain\ViewModelBase.cs" />
-    <Compile Include="Src\ViewModel\Core\IViewModel.cs" />
-    <Compile Include="Src\View\Domain\ViewBase.cs" />
-    <Compile Include="Src\View\Core\IView.cs" />
-    <Compile Include="Src\View\Core\IViewFactory.cs" />
-    <Compile Include="Src\View\Domain\ViewFactory.cs" />
+    <Compile Include="Src\Args\IPropertyChangedArgs.cs" />
+    <Compile Include="Src\Args\CPropertyArgs.cs" />
+    <Compile Include="Src\Args\SPropertyArgs.cs" />
+    <Compile Include="Src\Core\IPropertyChangedHandler.cs" />
+    <Compile Include="Src\Core\SimpleViewModel.cs" />
+    <Compile Include="Src\Core\ViewModelBase.cs" />
+    <Compile Include="Src\Core\IViewModel.cs" />
+    <Compile Include="Src\Core\ViewBase.cs" />
+    <Compile Include="Src\Core\IView.cs" />
+    <Compile Include="Src\Core\IViewFactory.cs" />
+    <Compile Include="Src\Core\ViewFactory.cs" />
+    <Compile Include="Src\Extends\ArgsExtends.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

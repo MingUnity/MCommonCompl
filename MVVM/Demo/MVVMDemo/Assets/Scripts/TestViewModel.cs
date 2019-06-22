@@ -1,27 +1,8 @@
-﻿using MingUnity.MVVM.Model;
-using MingUnity.MVVM.ViewModel;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using MingUnity.MVVM;
 
-public class TestViewModel : ViewModelBase<IModel>
+public class TestViewModel : ViewModelBase
 {
     private string _text;
-
-    public override bool Active
-    {
-        get
-        {
-            return _active;
-        }
-        set
-        {
-            _active = value;
-
-            RaisePropertyChanged("Active");
-        }
-    }
 
     public string Text
     {
@@ -31,16 +12,16 @@ public class TestViewModel : ViewModelBase<IModel>
         }
         set
         {
+            string old = _text;
+
             _text = value;
 
-            RaisePropertyChanged("Text");
+            RaiseCPropertyChanged("Text", old, value);
         }
     }
 
     public override void Setup()
     {
-        Active = _active;
-
         Text = _text;
     }
 }

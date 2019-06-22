@@ -4,6 +4,11 @@
         <name>Ming_EventHub</name>
     </assembly>
     <members>
+        <member name="T:Ming.EventHub.CommonEventArgs`1">
+            <summary>
+            通用事件参数
+            </summary>
+        </member>
         <member name="T:Ming.EventHub.IEventArgs">
             <summary>
             事件参数
@@ -19,12 +24,12 @@
             处理事件
             </summary>
         </member>
-        <member name="T:Ming.EventHub.MEventArgs">
+        <member name="T:Ming.EventHub.SimpleEventArgs">
             <summary>
-            通用事件参数
+            简单事件参数
             </summary>
         </member>
-        <member name="P:Ming.EventHub.MEventArgs.Args">
+        <member name="P:Ming.EventHub.SimpleEventArgs.Args">
             <summary>
             参数集
             </summary>

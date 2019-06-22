@@ -1,38 +1,26 @@
-﻿using System;
-using MingUnity.MVVM.View;
+﻿using MingUnity.MVVM;
+using System;
 using UnityEngine;
 
-public class TestView_01 : ViewBase<TestViewModel>
+public class TestView_01 : ViewBase
 {
-    public bool Active
+    public override bool Active
     {
         get
         {
-            bool res = false;
-
-            if (_root != null)
-            {
-                res = _root.gameObject.activeSelf;
-            }
-
-            return res;
-        }
-        private set
-        {
-            if (_root != null)
-            {
-                _root.gameObject.SetActive(value);
-            }
+            return _root.gameObject.activeSelf;
         }
     }
 
-    public override void Create(Transform parent, Action callback)
+    public override void Create(Transform parent, bool active, Action callback = null)
     {
         GameObject prefab = Resources.Load<GameObject>("TestView_01");
 
         if (prefab != null)
         {
             _root = GameObject.Instantiate(prefab, parent).GetComponent<RectTransform>();
+
+            SetActive(active);
         }
 
         if (callback != null)
@@ -41,24 +29,33 @@ public class TestView_01 : ViewBase<TestViewModel>
         }
     }
 
-    protected override void PropertyChanged(string propertyName)
+    public override void Show(Action callback = null)
     {
-        if (!string.IsNullOrEmpty(propertyName))
+        SetActive(true);
+
+        if (callback != null)
         {
-            switch (propertyName)
-            {
-                case "Active":
-                    Active = _viewModel.Active;
-                    break;
-            }
+            callback.Invoke();
         }
     }
 
-    protected override void Release()
+    public override void Hide(Action callback = null)
     {
-        if (_root != null)
+        SetActive(false);
+
+        if (callback != null)
         {
-            GameObject.DestroyImmediate(_root.gameObject);
+            callback.Invoke();
         }
+    }
+
+    protected override void ViewModelPropertyChanged(string propertyName, IPropertyChangedArgs args)
+    {
+
+    }
+
+    private void SetActive(bool active)
+    {
+        _root.gameObject.SetActive(active);
     }
 }

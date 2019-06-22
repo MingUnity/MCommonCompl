@@ -1,19 +1,17 @@
 ﻿using System;
-using MingUnity.MVVM.ViewModel;
 using UnityEngine;
-using System.ComponentModel;
 
-namespace MingUnity.MVVM.View
+namespace MingUnity.MVVM
 {
     /// <summary>
     /// 视图基类
     /// </summary>
-    public abstract class ViewBase<T> : IView where T : class, IViewModel
+    public abstract class ViewBase : IView
     {
         /// <summary>
         /// 视图模型
         /// </summary>
-        protected T _viewModel;
+        protected IViewModel _viewModel;
 
         /// <summary>
         /// 根节点
@@ -33,16 +31,16 @@ namespace MingUnity.MVVM.View
             {
                 if (_viewModel != null)
                 {
-                    _viewModel.PropertyChanged -= ViewModelPropertyChanged;
+                    _viewModel.OnPropertyChangedEvent -= ViewModelPropertyChanged;
                 }
 
-                if (value is T)
-                {
-                    _viewModel = value as T;
+                _viewModel = value;
 
+                if (_viewModel != null)
+                {
                     SyncModel();
 
-                    _viewModel.PropertyChanged += ViewModelPropertyChanged;
+                    _viewModel.OnPropertyChangedEvent += ViewModelPropertyChanged;
 
                     _viewModel.Setup();
                 }
@@ -50,20 +48,35 @@ namespace MingUnity.MVVM.View
         }
 
         /// <summary>
+        /// 激活
+        /// </summary>
+        public abstract bool Active { get; }
+
+        /// <summary>
         /// 创建
         /// </summary>
-        public abstract void Create(Transform parent, Action callback);
+        public abstract void Create(Transform parent, bool active, Action callback = null);
+
+        /// <summary>
+        /// 显示
+        /// </summary>
+        public abstract void Show(Action callback = null);
+
+        /// <summary>
+        /// 隐藏
+        /// </summary>
+        public abstract void Hide(Action callback = null);
 
         /// <summary>
         /// 注销
         /// </summary>
         public void Dispose()
         {
-            Release();
+            OnDisposing();
 
             if (_viewModel != null)
             {
-                _viewModel.PropertyChanged -= ViewModelPropertyChanged;
+                _viewModel.OnPropertyChangedEvent -= ViewModelPropertyChanged;
             }
 
             if (_root != null)
@@ -73,14 +86,9 @@ namespace MingUnity.MVVM.View
         }
 
         /// <summary>
-        /// 属性改变
-        /// </summary>
-        protected abstract void PropertyChanged(string propertyName);
-
-        /// <summary>
         /// 销毁
         /// </summary>
-        protected virtual void Release() { }
+        protected virtual void OnDisposing() { }
 
         /// <summary>
         /// 同步数据模型
@@ -90,14 +98,6 @@ namespace MingUnity.MVVM.View
         /// <summary>
         /// 视图模型属性改变
         /// </summary>
-        private void ViewModelPropertyChanged(object sender, PropertyChangedEventArgs args)
-        {
-            if (args == null)
-            {
-                return;
-            }
-
-            PropertyChanged(args.PropertyName);
-        }
+        protected abstract void ViewModelPropertyChanged(string propertyName, IPropertyChangedArgs args);
     }
 }

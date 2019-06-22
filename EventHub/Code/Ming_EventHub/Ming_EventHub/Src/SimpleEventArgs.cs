@@ -1,19 +1,19 @@
 ﻿namespace Ming.EventHub
 {
     /// <summary>
-    /// 通用事件参数
+    /// 简单事件参数
     /// </summary>
-    public sealed class MEventArgs : IEventArgs
+    public sealed class SimpleEventArgs : IEventArgs
     {
-        private static MEventArgs _empty;
+        private static SimpleEventArgs _empty;
 
-        public static MEventArgs Empty
+        public static SimpleEventArgs Empty
         {
             get
             {
                 if (_empty == null)
                 {
-                    _empty = new MEventArgs();
+                    _empty = new SimpleEventArgs();
                 }
 
                 return _empty;
@@ -33,7 +33,7 @@
             }
         }
 
-        public MEventArgs(params object[] keys)
+        public SimpleEventArgs(params object[] keys)
         {
             this._args = keys;
         }
