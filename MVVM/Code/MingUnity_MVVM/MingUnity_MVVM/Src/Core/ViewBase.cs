@@ -50,7 +50,7 @@ namespace MingUnity.MVVM
         /// <summary>
         /// 激活
         /// </summary>
-        public abstract bool Active { get; }
+        public abstract bool Active { get; set; }
 
         /// <summary>
         /// 创建

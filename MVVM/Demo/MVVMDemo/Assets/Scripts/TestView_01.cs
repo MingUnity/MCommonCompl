@@ -10,6 +10,10 @@ public class TestView_01 : ViewBase
         {
             return _root.gameObject.activeSelf;
         }
+        set
+        {
+            _root.gameObject.SetActive(value);
+        }
     }
 
     public override void Create(Transform parent, bool active, Action callback = null)
@@ -20,7 +24,7 @@ public class TestView_01 : ViewBase
         {
             _root = GameObject.Instantiate(prefab, parent).GetComponent<RectTransform>();
 
-            SetActive(active);
+            Active = active;
         }
 
         if (callback != null)
@@ -31,7 +35,7 @@ public class TestView_01 : ViewBase
 
     public override void Show(Action callback = null)
     {
-        SetActive(true);
+        Active = true;
 
         if (callback != null)
         {
@@ -41,7 +45,7 @@ public class TestView_01 : ViewBase
 
     public override void Hide(Action callback = null)
     {
-        SetActive(false);
+        Active = false;
 
         if (callback != null)
         {
@@ -52,10 +56,5 @@ public class TestView_01 : ViewBase
     protected override void ViewModelPropertyChanged(string propertyName, IPropertyChangedArgs args)
     {
 
-    }
-
-    private void SetActive(bool active)
-    {
-        _root.gameObject.SetActive(active);
     }
 }

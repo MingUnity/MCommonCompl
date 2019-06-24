@@ -20,6 +20,13 @@ public class TestView_02 : ViewBase
 
             return res;
         }
+        set
+        {
+            if (_root != null)
+            {
+                _root.gameObject.SetActive(value);
+            }
+        }
     }
 
     public string Text
@@ -58,7 +65,7 @@ public class TestView_02 : ViewBase
             }
         }
 
-        SetActive(active);
+        Active = active;
 
         if (callback != null)
         {
@@ -68,7 +75,7 @@ public class TestView_02 : ViewBase
 
     public override void Show(Action callback = null)
     {
-        SetActive(true);
+        Active = true;
 
         if (callback != null)
         {
@@ -78,7 +85,7 @@ public class TestView_02 : ViewBase
 
     public override void Hide(Action callback = null)
     {
-        SetActive(false);
+        Active = false;
 
         if (callback != null)
         {
@@ -99,10 +106,5 @@ public class TestView_02 : ViewBase
                 Text = args.GetCValue<string>();
                 break;
         }
-    }
-
-    private void SetActive(bool active)
-    {
-        _root.gameObject.SetActive(active);
     }
 }

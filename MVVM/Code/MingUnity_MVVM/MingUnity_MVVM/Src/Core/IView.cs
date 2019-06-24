@@ -16,7 +16,7 @@ namespace MingUnity.MVVM
         /// <summary>
         /// 激活
         /// </summary>
-        bool Active { get; }
+        bool Active { get; set; }
 
         /// <summary>
         /// 创建
