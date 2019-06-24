@@ -1,44 +1,52 @@
 ﻿using Ming.EventHub;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Main : MonoBehaviour
 {
+    private IEventHub _eventHub;
+
+    private void Awake()
+    {
+        _eventHub = new MEventHub();
+    }
+
     private void Start()
     {
         Handler_01 h1 = new Handler_01();
 
-        Handler_02 h2 = new Handler_02();
+        _eventHub.AddListener(0, h1);
+
+        _eventHub.AddListener(1, h1);
+
+        _eventHub.AddListener(2, h1);
+
+        _eventHub.AddListener(2, new Handler_02());
     }
 
     private void OnGUI()
     {
         if (GUILayout.Button("Log"))
         {
-            MEventHub.Instance.Dispatch((int)EventId.DebugLog, MEventArgs.Empty);
+            _eventHub.Dispatch(EventId.DebugLog, SimpleEventArgs.Empty);
         }
 
         if (GUILayout.Button("Error"))
         {
-            MEventHub.Instance.Dispatch((int)EventId.DebugLogError, MEventArgs.Empty);
+            _eventHub.Dispatch(EventId.DebugLogError, SimpleEventArgs.Empty);
         }
 
         if (GUILayout.Button("Warning"))
         {
-            MEventHub.Instance.Dispatch((int)EventId.DebugLogWarning, new WarningArgs()
-            {
-                content = "警告 警告!"
-            });
+            _eventHub.Dispatch(EventId.DebugLogWarning, new CommonCEventArgs<string>("Warning Warning"));
         }
     }
 }
 
-public enum EventId
+public static class EventId
 {
-    DebugLog = 0,
+    public const int DebugLog = 0;
 
-    DebugLogError = 1,
+    public const int DebugLogError = 1;
 
-    DebugLogWarning = 2
+    public const int DebugLogWarning = 2;
 }

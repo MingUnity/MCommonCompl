@@ -5,17 +5,12 @@
     /// </summary>
     public sealed class SimpleEventArgs : IEventArgs
     {
-        private static SimpleEventArgs _empty;
+        private readonly static SimpleEventArgs _empty = new SimpleEventArgs();
 
         public static SimpleEventArgs Empty
         {
             get
             {
-                if (_empty == null)
-                {
-                    _empty = new SimpleEventArgs();
-                }
-
                 return _empty;
             }
         }

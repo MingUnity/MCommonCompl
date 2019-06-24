@@ -5,36 +5,8 @@ namespace Ming.EventHub
     /// <summary>
     /// 事件处理中心
     /// </summary>
-    public class MEventHub
+    public class MEventHub : IEventHub
     {
-        private static MEventHub _instance;
-
-        private static object _locker = new object();
-
-        public static MEventHub Instance
-        {
-            get
-            {
-                if (_instance == null)
-                {
-                    lock (_locker)
-                    {
-                        if (_instance == null)
-                        {
-                            _instance = new MEventHub();
-                        }
-                    }
-                }
-
-                return _instance;
-            }
-        }
-
-        private MEventHub()
-        {
-
-        }
-
         private Dictionary<int, List<IEventListener>> _eventDic = new Dictionary<int, List<IEventListener>>();
 
         /// <summary>
