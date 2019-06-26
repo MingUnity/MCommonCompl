@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ming_SocketClient</name>
+    </assembly>
+    <members>
+        <member name="T:Ming.SocketClient.ISocketClient">
+            <summary>
+            Socket客户端接口
+            </summary>
+        </member>
+        <member name="E:Ming.SocketClient.ISocketClient.OnConnectCompletedEvent">
+            <summary>
+            连接完成事件
+            </summary>
+        </member>
+        <member name="E:Ming.SocketClient.ISocketClient.OnDisconnectCompletedEvent">
+            <summary>
+            断开连接完成事件
+            </summary>
+        </member>
+        <member name="E:Ming.SocketClient.ISocketClient.OnReceiveCompletedEvent">
+            <summary>
+            接收数据完成事件
+            </summary>
+        </member>
+        <member name="E:Ming.SocketClient.ISocketClient.OnSendCompletedEvent">
+            <summary>
+            发送数据完成事件
+            </summary>
+        </member>
+        <member name="P:Ming.SocketClient.ISocketClient.IsConnected">
+            <summary>
+            连接标识
+            </summary>
+        </member>
+        <member name="M:Ming.SocketClient.ISocketClient.Connect">
+            <summary>
+            连接
+            </summary>
+        </member>
+        <member name="M:Ming.SocketClient.ISocketClient.Disconnect">
+            <summary>
+            断开连接
+            </summary>
+        </member>
+        <member name="M:Ming.SocketClient.ISocketClient.Send(System.Byte[])">
+            <summary>
+            发送数据
+            </summary>
+        </member>
+        <member name="T:Ming.SocketClient.SocketClientResult">
+            <summary>
+            Socket客户端返回结果
+            </summary>
+        </member>
+        <member name="F:Ming.SocketClient.SocketClientResult.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="F:Ming.SocketClient.SocketClientResult.Success">
+            <summary>
+            成功
+            </summary>
+        </member>
+        <member name="F:Ming.SocketClient.SocketClientResult.NotConnect">
+            <summary>
+            未连接
+            </summary>
+        </member>
+        <member name="F:Ming.SocketClient.SocketClientResult.Exception">
+            <summary>
+            异常
+            </summary>
+        </member>
+    </members>
+</doc>

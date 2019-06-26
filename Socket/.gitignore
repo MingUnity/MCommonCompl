@@ -1,0 +1,14 @@
+Code/Client/Ming_SocketClient/.vs
+Code/Client/Ming_SocketClient/Ming_SocketClient/bin
+Code/Client/Ming_SocketClient/Ming_SocketClient/obj
+Code/Server/Ming_SocketServer/.vs
+Code/Server/Ming_SocketServer/Ming_SocketServer/bin
+Code/Server/Ming_SocketServer/Ming_SocketServer/obj
+Demo/SocketDemo/Library
+Demo/SocketDemo/.vs
+Demo/SocketDemo/Temp
+Demo/SocketDemo/SocketDemo.sln
+Demo/SocketDemo/SocketDemo.CSharp.csproj
+Demo/ServerDemo/.vs
+Demo/ServerDemo/ServerDemo/bin
+Demo/ServerDemo/ServerDemo/obj
