@@ -41,5 +41,13 @@ namespace MingUnity.Common
 
             return dir;
         }
+
+        /// <summary>
+        /// 获取加载资源时persistentDataPath路径
+        /// </summary>
+        public static string GetResPersistentDataPath()
+        {
+            return $"file://{Application.persistentDataPath}";
+        }
     }
 }

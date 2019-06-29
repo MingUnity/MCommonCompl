@@ -24,6 +24,11 @@
             获取加载资源时streamingAssets路径
             </summary>
         </member>
+        <member name="M:MingUnity.Common.PlatformUtility.GetResPersistentDataPath">
+            <summary>
+            获取加载资源时persistentDataPath路径
+            </summary>
+        </member>
         <member name="T:MingUnity.Common.Singleton`1">
             <summary>
             单例

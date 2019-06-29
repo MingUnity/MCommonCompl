@@ -4,14 +4,54 @@
         <name>Ming_EventHub</name>
     </assembly>
     <members>
-        <member name="T:Ming.EventHub.CommonEventArgs`1">
+        <member name="T:Ming.EventHub.CommonSEventArgs`1">
             <summary>
-            通用事件参数
+            通用事件参数(Struct)
+            </summary>
+        </member>
+        <member name="T:Ming.EventHub.CommonCEventArgs`1">
+            <summary>
+            通用事件参数(Class)
+            </summary>
+        </member>
+        <member name="T:Ming.EventHub.Extends">
+            <summary>
+            扩展
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.Extends.GetCValue``1(Ming.EventHub.IEventArgs)">
+            <summary>
+            获取值(Class)
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.Extends.GetSValue``1(Ming.EventHub.IEventArgs)">
+            <summary>
+            获取值(Struct)
             </summary>
         </member>
         <member name="T:Ming.EventHub.IEventArgs">
             <summary>
             事件参数
+            </summary>
+        </member>
+        <member name="T:Ming.EventHub.IEventHub">
+            <summary>
+            事件中心接口
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.IEventHub.AddListener(System.Int32,Ming.EventHub.IEventListener)">
+            <summary>
+            添加监听
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.IEventHub.RemoveListener(System.Int32,Ming.EventHub.IEventListener)">
+            <summary>
+            移除监听
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.IEventHub.Dispatch(System.Int32,Ming.EventHub.IEventArgs)">
+            <summary>
+            分发
             </summary>
         </member>
         <member name="T:Ming.EventHub.IEventListener">
