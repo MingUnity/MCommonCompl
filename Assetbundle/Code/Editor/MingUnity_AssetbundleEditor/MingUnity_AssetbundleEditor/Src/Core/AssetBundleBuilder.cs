@@ -47,6 +47,8 @@ namespace MingUnity.Editor.AssetbundleModule
                 }
 
                 BuildPipeline.BuildAssetBundles(setting.outputDir, options, (BuildTarget)setting.targetPlatform);
+
+                AssetDatabase.Refresh();
             });
         }
 
