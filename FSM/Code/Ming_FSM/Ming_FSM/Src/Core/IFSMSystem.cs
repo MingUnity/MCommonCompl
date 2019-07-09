@@ -6,6 +6,11 @@
     public interface IFSMSystem
     {
         /// <summary>
+        /// 任意状态
+        /// </summary>
+        IFSMState AnyState { get; }
+
+        /// <summary>
         /// 添加状态
         /// </summary>
         void AddState(IFSMState state, bool isDefault = false);

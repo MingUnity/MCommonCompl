@@ -34,6 +34,11 @@
             有限状态机接口
             </summary>
         </member>
+        <member name="P:Ming.FSM.IFSMSystem.AnyState">
+            <summary>
+            任意状态
+            </summary>
+        </member>
         <member name="M:Ming.FSM.IFSMSystem.AddState(Ming.FSM.IFSMState,System.Boolean)">
             <summary>
             添加状态
@@ -52,6 +57,11 @@
         <member name="M:Ming.FSM.IFSMSystem.Update">
             <summary>
             刷新
+            </summary>
+        </member>
+        <member name="T:Ming.FSM.AnyState">
+            <summary>
+            任意状态
             </summary>
         </member>
         <member name="T:Ming.FSM.FSMState">
@@ -97,6 +107,16 @@
         <member name="F:Ming.FSM.FSMSystem._defaultState">
             <summary>
             默认状态
+            </summary>
+        </member>
+        <member name="F:Ming.FSM.FSMSystem._anyState">
+            <summary>
+            任意状态
+            </summary>
+        </member>
+        <member name="P:Ming.FSM.FSMSystem.AnyState">
+            <summary>
+            任意状态
             </summary>
         </member>
         <member name="M:Ming.FSM.FSMSystem.AddState(Ming.FSM.IFSMState,System.Boolean)">

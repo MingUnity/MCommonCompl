@@ -23,6 +23,16 @@ namespace Ming.FSM
         private IFSMState _defaultState;
 
         /// <summary>
+        /// 任意状态
+        /// </summary>
+        private IFSMState _anyState = new AnyState();
+
+        /// <summary>
+        /// 任意状态
+        /// </summary>
+        public IFSMState AnyState => _anyState;
+
+        /// <summary>
         /// 添加状态
         /// </summary>
         public void AddState(IFSMState state, bool isDefault = false)
@@ -55,12 +65,14 @@ namespace Ming.FSM
         /// </summary>
         public void SetTransition(int transition, params object[] keys)
         {
-            if (_curState != null)
-            {
-                IFSMState targetState = _curState[transition];
+            IFSMState targetState = _anyState[transition];
 
-                TurnState(_curState, targetState, keys);
+            if (targetState == null && _curState != null)
+            {
+                targetState = _curState[transition];
             }
+
+            TurnState(_curState, targetState, keys);
         }
 
         /// <summary>
