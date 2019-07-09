@@ -10,6 +10,8 @@ namespace MingUnity.ElementCore
     {
         protected IElementModel _elementModel;
 
+        public abstract bool Active { get; set; }
+
         public IElementModel ElementModel
         {
             get

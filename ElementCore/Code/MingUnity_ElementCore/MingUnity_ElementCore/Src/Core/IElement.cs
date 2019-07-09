@@ -14,6 +14,11 @@ namespace MingUnity.ElementCore
         IElementModel ElementModel { get; set; }
 
         /// <summary>
+        /// 激活
+        /// </summary>
+        bool Active { get; set; }
+
+        /// <summary>
         /// 创建
         /// </summary>
         void Create(Transform parent = null, Action callback = null);
