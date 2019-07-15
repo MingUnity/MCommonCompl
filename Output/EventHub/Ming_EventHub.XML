@@ -94,5 +94,25 @@
             分发
             </summary>
         </member>
+        <member name="T:Ming.EventHub.SimpleEventHub">
+            <summary>
+            简单事件中心
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.SimpleEventHub.AddListener(System.Int32,System.Action{Ming.EventHub.IEventArgs})">
+            <summary>
+            添加监听
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.SimpleEventHub.Dispatch(System.Int32,Ming.EventHub.IEventArgs)">
+            <summary>
+            分发
+            </summary>
+        </member>
+        <member name="M:Ming.EventHub.SimpleEventHub.RemoveListener(System.Int32,System.Action{Ming.EventHub.IEventArgs})">
+            <summary>
+            移除监听
+            </summary>
+        </member>
     </members>
 </doc>

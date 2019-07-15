@@ -52,6 +52,7 @@
     <Compile Include="Src\IEventListener.cs" />
     <Compile Include="Src\SimpleEventArgs.cs" />
     <Compile Include="Src\MEventHub.cs" />
+    <Compile Include="Src\SimpleEventHub.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
