@@ -29,6 +29,21 @@
             获取加载资源时persistentDataPath路径
             </summary>
         </member>
+        <member name="T:MingUnity.Common.SerializeUtility">
+            <summary>
+            序列化工具
+            </summary>
+        </member>
+        <member name="M:MingUnity.Common.SerializeUtility.Serialize(System.Object)">
+            <summary>
+            序列化
+            </summary>
+        </member>
+        <member name="M:MingUnity.Common.SerializeUtility.DeSerialize``1(System.Byte[])">
+            <summary>
+            反序列化
+            </summary>
+        </member>
         <member name="T:MingUnity.Common.Singleton`1">
             <summary>
             单例

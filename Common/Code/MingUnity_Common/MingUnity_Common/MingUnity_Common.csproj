@@ -48,11 +48,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Data\DataExtends.cs" />
+    <Compile Include="Src\Data\Int2.cs" />
+    <Compile Include="Src\Data\Int3.cs" />
+    <Compile Include="Src\Data\Float3.cs" />
+    <Compile Include="Src\Data\Float2.cs" />
     <Compile Include="Src\Loom.cs" />
     <Compile Include="Src\MonoSingleton.cs" />
     <Compile Include="Src\PlatformUtility.cs" />
+    <Compile Include="Src\SerializeUtility.cs" />
     <Compile Include="Src\Singleton.cs" />
     <Compile Include="Src\TaskManager.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

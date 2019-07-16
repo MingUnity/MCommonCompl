@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using MingUnity.AssetBundles;
 using UnityEngine;
-
-using System.IO;
-using MingUnity.AssetBundles;
 
 public class Main : MonoBehaviour
 {
@@ -29,16 +25,10 @@ public class Main : MonoBehaviour
                {
                    GameObject.Instantiate(obj);
                }
+           },_=>
+           {
+               Debug.Log($"Cube Progress {_}");
            });
-
-            string spherePath= string.Format("{0}/AssetBundle/3dobj", Application.streamingAssetsPath);
-
-            GameObject sp = _abLoader.GetAsset<GameObject>(spherePath, "Sphere");
-
-            if (sp != null)
-            {
-                GameObject.Instantiate(sp);
-            }
         }
 
         if (GUILayout.Button("Sphere"))
@@ -51,6 +41,9 @@ public class Main : MonoBehaviour
                 {
                     GameObject.Instantiate(obj);
                 }
+            }, _ =>
+            {
+                Debug.Log($"Sphere Progress {_}");
             });
         }
 
@@ -64,6 +57,9 @@ public class Main : MonoBehaviour
                 {
                     GameObject.Instantiate(obj, canvas.transform);
                 }
+            }, _ =>
+            {
+                Debug.Log($"Image Progress {_}");
             });
         }
     }

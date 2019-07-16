@@ -14,7 +14,7 @@
             获取资源
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
+        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0},System.Action{System.Single})">
             <summary>
             异步获取资源
             </summary>
@@ -54,7 +54,7 @@
             加载中标识
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundleTask.Load(System.String,System.Boolean,System.Action{UnityEngine.AssetBundle})">
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.Load(System.String,System.Boolean,System.Action{UnityEngine.AssetBundle},System.Action{System.Single})">
             <summary>
             加载
             </summary>
@@ -64,7 +64,7 @@
             卸载
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundleTask.LoadABAsync(System.String,System.Action{UnityEngine.AssetBundle})">
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.LoadABAsync(System.String,System.Action{UnityEngine.AssetBundle},System.Action{System.Single})">
             <summary>
             异步加载AB包
             </summary>
@@ -84,7 +84,7 @@
             获取资源
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0})">
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAssetAsync``1(System.String,System.String,System.Action{``0},System.Action{System.Single})">
             <summary>
             异步获取资源
             </summary>
@@ -94,7 +94,7 @@
             获取任务
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAssetAsync(UnityEngine.AssetBundle,System.String,System.Action{UnityEngine.Object})">
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAssetAsync(UnityEngine.AssetBundle,System.String,System.Action{UnityEngine.Object},System.Action{System.Single})">
             <summary>
             异步获取资源
             </summary>

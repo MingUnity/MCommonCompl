@@ -15,7 +15,7 @@ namespace MingUnity.AssetBundles
         /// <summary>
         /// 异步获取资源
         /// </summary>
-        void GetAssetAsync<T>(string abPath, string assetName, Action<T> callback) where T : UnityEngine.Object;
+        void GetAssetAsync<T>(string abPath, string assetName, Action<T> callback, Action<float> progressCallback = null) where T : UnityEngine.Object;
 
         /// <summary>
         /// 卸载

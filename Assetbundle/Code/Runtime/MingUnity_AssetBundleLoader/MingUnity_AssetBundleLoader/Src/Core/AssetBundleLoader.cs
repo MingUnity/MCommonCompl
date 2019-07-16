@@ -55,7 +55,7 @@ namespace MingUnity.AssetBundles
         /// <summary>
         /// 异步获取资源
         /// </summary>
-        public void GetAssetAsync<T>(string abPath, string assetName, Action<T> callback) where T : UnityEngine.Object
+        public void GetAssetAsync<T>(string abPath, string assetName, Action<T> callback, Action<float> progressCallback = null) where T : UnityEngine.Object
         {
             AssetBundleTask task = GetTask(abPath);
 
@@ -64,7 +64,13 @@ namespace MingUnity.AssetBundles
                 Task.CreateTask(GetAssetAsync(ab, assetName, (asset) =>
                   {
                       callback?.Invoke(asset as T);
+                  }, (progress) =>
+                  {
+                      progressCallback?.Invoke(progress * 0.5f + 0.5f);
                   }));
+            }, (progress) =>
+            {
+                progressCallback?.Invoke(progress * 0.5f);
             });
         }
 
@@ -90,22 +96,34 @@ namespace MingUnity.AssetBundles
         /// <summary>
         /// 异步获取资源
         /// </summary>
-        private IEnumerator GetAssetAsync(AssetBundle ab, string assetName, Action<UnityEngine.Object> callback)
+        private IEnumerator GetAssetAsync(AssetBundle ab, string assetName, Action<UnityEngine.Object> callback, Action<float> progressCallback = null)
         {
             if (ab != null)
             {
                 AssetBundleRequest abReq = ab.LoadAssetAsync(assetName);
 
-                yield return abReq;
+                float progress = 0;
 
-                if (abReq.isDone)
+                while (!abReq.isDone)
                 {
-                    callback?.Invoke(abReq.asset);
+                    if (abReq.progress != progress)
+                    {
+                        progress = abReq.progress;
+
+                        progressCallback?.Invoke(progress);
+                    }
+
+                    yield return null;
                 }
-                else
+
+                if (progress != 1)
                 {
-                    callback?.Invoke(null);
+                    progress = 1;
+
+                    progressCallback?.Invoke(progress);
                 }
+
+                callback?.Invoke(abReq.asset);
             }
             else
             {

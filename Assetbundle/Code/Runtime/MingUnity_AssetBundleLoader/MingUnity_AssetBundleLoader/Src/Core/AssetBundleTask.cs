@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Networking;
 
 namespace MingUnity.AssetBundles
 {
@@ -32,7 +33,7 @@ namespace MingUnity.AssetBundles
         /// <summary>
         /// 加载
         /// </summary>
-        public void Load(string abPath, bool async, Action<AssetBundle> callback)
+        public void Load(string abPath, bool async, Action<AssetBundle> callback, Action<float> progressCallback = null)
         {
             _cacheCallback += callback;
 
@@ -59,7 +60,7 @@ namespace MingUnity.AssetBundles
                                  this._assetbundle = ab;
 
                                  InvokeCache();
-                             }));
+                             }, progressCallback));
                         }
                     }
                     else  //同步
@@ -74,6 +75,8 @@ namespace MingUnity.AssetBundles
                         }
 
                         _assetbundle = AssetBundle.LoadFromFile(abPath);
+
+                        progressCallback?.Invoke(1);
 
                         InvokeCache();
                     }
@@ -92,13 +95,32 @@ namespace MingUnity.AssetBundles
         /// <summary>
         /// 异步加载AB包
         /// </summary>
-        private IEnumerator LoadABAsync(string abPath, Action<AssetBundle> callback)
+        private IEnumerator LoadABAsync(string abPath, Action<AssetBundle> callback, Action<float> progressCallback = null)
         {
             WWW www = new WWW(abPath);
 
-            yield return www;
+            float progress = 0;
 
-            if (www.isDone && string.IsNullOrEmpty(www.error))
+            while (!www.isDone)
+            {
+                if (www.progress != progress)
+                {
+                    progress = www.progress;
+
+                    progressCallback?.Invoke(progress);
+                }
+
+                yield return null;
+            }
+
+            if (progress != 1)
+            {
+                progress = 1;
+
+                progressCallback?.Invoke(progress);
+            }
+
+            if (string.IsNullOrEmpty(www.error))
             {
                 callback?.Invoke(www.assetBundle);
             }
