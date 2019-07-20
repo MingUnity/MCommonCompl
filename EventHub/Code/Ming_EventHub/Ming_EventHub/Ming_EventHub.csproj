@@ -47,6 +47,7 @@
     <Compile Include="Src\CommonSEventArgs.cs" />
     <Compile Include="Src\CommonCEventArgs.cs" />
     <Compile Include="Src\Extends.cs" />
+    <Compile Include="Src\IActionEventHub.cs" />
     <Compile Include="Src\IEventArgs.cs" />
     <Compile Include="Src\IEventHub.cs" />
     <Compile Include="Src\IEventListener.cs" />

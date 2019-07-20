@@ -2,6 +2,10 @@
 {
     public struct Int3
     {
+        private static Int3 _zero = new Int3(0, 0, 0);
+
+        public static Int3 Zero => _zero;
+
         public int x;
 
         public int y;

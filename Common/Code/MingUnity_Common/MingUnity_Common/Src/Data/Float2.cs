@@ -5,6 +5,10 @@ namespace MingUnity.Common
     [Serializable]
     public struct Float2
     {
+        private static Float2 _zero = new Float2(0, 0);
+
+        public static Float2 Zero => _zero;
+
         public float x;
 
         public float y;

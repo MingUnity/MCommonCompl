@@ -6,7 +6,7 @@ namespace Ming.EventHub
     /// <summary>
     /// 简单事件中心
     /// </summary>
-    public class SimpleEventHub
+    public class SimpleEventHub : IActionEventHub
     {
         private Dictionary<int, List<Action<IEventArgs>>> _events = new Dictionary<int, List<Action<IEventArgs>>>();
 

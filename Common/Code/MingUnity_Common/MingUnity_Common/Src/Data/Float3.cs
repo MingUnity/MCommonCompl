@@ -2,6 +2,10 @@
 {
     public struct Float3
     {
+        private static Float3 _zero = new Float3(0, 0, 0);
+
+        public static Float3 Zero => _zero;
+
         public float x;
 
         public float y;
