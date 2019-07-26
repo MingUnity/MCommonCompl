@@ -1,5 +1,8 @@
-﻿namespace MingUnity.Common
+﻿using System;
+
+namespace MingUnity.Common
 {
+    [Serializable]
     public struct Int3
     {
         private static Int3 _zero = new Int3(0, 0, 0);
