@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 
 namespace MingUnity.AssetBundles
 {
@@ -7,6 +8,17 @@ namespace MingUnity.AssetBundles
     /// </summary>
     public interface IAssetBundleLoader
     {
+        /// <summary>
+        /// 加载AB包
+        /// </summary>
+        AssetBundle LoadAssetBundle(string abPath);
+
+        /// <summary>
+        /// 异步加载AB包
+        /// </summary>
+        /// <param name="abPath"></param>
+        void LoadAssetBundleAsync(string abPath, Action<AssetBundle> callback, Action<float> progressCallback);
+
         /// <summary>
         /// 获取资源
         /// </summary>

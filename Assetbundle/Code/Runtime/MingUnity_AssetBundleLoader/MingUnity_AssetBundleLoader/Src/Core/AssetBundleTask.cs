@@ -31,9 +31,26 @@ namespace MingUnity.AssetBundles
         private bool _loading = false;
 
         /// <summary>
+        /// ab包路径
+        /// </summary>
+        private string _abPath;
+
+        /// <summary>
+        /// 异步任务
+        /// </summary>
+        private bool _async;
+
+        public AssetBundleTask(string abPath, bool async = true)
+        {
+            this._abPath = abPath;
+
+            this._async = async;
+        }
+
+        /// <summary>
         /// 加载
         /// </summary>
-        public void Load(string abPath, bool async, Action<AssetBundle> callback, Action<float> progressCallback = null)
+        public void Load(Action<AssetBundle> callback, Action<float> progressCallback = null)
         {
             _cacheCallback += callback;
 
@@ -43,15 +60,15 @@ namespace MingUnity.AssetBundles
             }
             else
             {
-                if (!string.IsNullOrEmpty(abPath))
+                if (!string.IsNullOrEmpty(_abPath))
                 {
-                    if (async) //异步
+                    if (_async) //异步
                     {
                         if (!_loading)
                         {
                             _loading = true;
 
-                            _loadTask = Task.CreateTask(LoadABAsync(abPath, (ab) =>
+                            _loadTask = Task.CreateTask(LoadABAsync(_abPath, (ab) =>
                              {
                                  _loadTask = null;
 
@@ -74,7 +91,7 @@ namespace MingUnity.AssetBundles
                             _loading = false;
                         }
 
-                        _assetbundle = AssetBundle.LoadFromFile(abPath);
+                        _assetbundle = AssetBundle.LoadFromFile(_abPath);
 
                         progressCallback?.Invoke(1);
 

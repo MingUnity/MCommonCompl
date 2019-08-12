@@ -9,6 +9,17 @@
             AB包加载接口
             </summary>
         </member>
+        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.LoadAssetBundle(System.String)">
+            <summary>
+            加载AB包
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.LoadAssetBundleAsync(System.String,System.Action{UnityEngine.AssetBundle},System.Action{System.Single})">
+            <summary>
+            异步加载AB包
+            </summary>
+            <param name="abPath"></param>
+        </member>
         <member name="M:MingUnity.AssetBundles.IAssetBundleLoader.GetAsset``1(System.String,System.String)">
             <summary>
             获取资源
@@ -54,7 +65,17 @@
             加载中标识
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundleTask.Load(System.String,System.Boolean,System.Action{UnityEngine.AssetBundle},System.Action{System.Single})">
+        <member name="F:MingUnity.AssetBundles.AssetBundleTask._abPath">
+            <summary>
+            ab包路径
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.AssetBundleTask._async">
+            <summary>
+            异步任务
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleTask.Load(System.Action{UnityEngine.AssetBundle},System.Action{System.Single})">
             <summary>
             加载
             </summary>
@@ -79,6 +100,16 @@
             AB包加载
             </summary>
         </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.LoadAssetBundle(System.String)">
+            <summary>
+            加载AB包
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.LoadAssetBundleAsync(System.String,System.Action{UnityEngine.AssetBundle},System.Action{System.Single})">
+            <summary>
+            异步加载AB包
+            </summary>
+        </member>
         <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAsset``1(System.String,System.String)">
             <summary>
             获取资源
@@ -89,7 +120,7 @@
             异步获取资源
             </summary>
         </member>
-        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetTask(System.String)">
+        <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetTask(System.String,System.Boolean)">
             <summary>
             获取任务
             </summary>

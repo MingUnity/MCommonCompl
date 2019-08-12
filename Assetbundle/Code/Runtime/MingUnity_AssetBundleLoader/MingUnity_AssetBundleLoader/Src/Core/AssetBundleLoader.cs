@@ -36,15 +36,42 @@ namespace MingUnity.AssetBundles
         }
 
         /// <summary>
+        /// 加载AB包
+        /// </summary>
+        public AssetBundle LoadAssetBundle(string abPath)
+        {
+            AssetBundle assetbundle = null;
+
+            AssetBundleTask task = GetTask(abPath, false);
+
+            task?.Load((ab) =>
+           {
+               assetbundle = ab;
+           });
+
+            return assetbundle;
+        }
+
+        /// <summary>
+        /// 异步加载AB包
+        /// </summary>
+        public void LoadAssetBundleAsync(string abPath, Action<AssetBundle> callback, Action<float> progressCallback)
+        {
+            AssetBundleTask task = GetTask(abPath, true);
+
+            task?.Load(callback, progressCallback);
+        }
+
+        /// <summary>
         /// 获取资源
         /// </summary>
         public T GetAsset<T>(string abPath, string assetName) where T : UnityEngine.Object
         {
             T asset = null;
 
-            AssetBundleTask task = GetTask(abPath);
+            AssetBundleTask task = GetTask(abPath, false);
 
-            task?.Load(abPath, false, (ab) =>
+            task?.Load((ab) =>
             {
                 asset = ab?.LoadAsset<T>(assetName);
             });
@@ -57,9 +84,9 @@ namespace MingUnity.AssetBundles
         /// </summary>
         public void GetAssetAsync<T>(string abPath, string assetName, Action<T> callback, Action<float> progressCallback = null) where T : UnityEngine.Object
         {
-            AssetBundleTask task = GetTask(abPath);
+            AssetBundleTask task = GetTask(abPath, true);
 
-            task?.Load(abPath, true, (ab) =>
+            task?.Load((ab) =>
             {
                 Task.CreateTask(GetAssetAsync(ab, assetName, (asset) =>
                   {
@@ -77,7 +104,7 @@ namespace MingUnity.AssetBundles
         /// <summary>
         /// 获取任务
         /// </summary>
-        private AssetBundleTask GetTask(string abPath)
+        private AssetBundleTask GetTask(string abPath, bool async)
         {
             string abKey = GetAbKey(abPath);
 
@@ -85,7 +112,7 @@ namespace MingUnity.AssetBundles
 
             if (task == null)
             {
-                task = new AssetBundleTask();
+                task = new AssetBundleTask(abPath, async);
 
                 this[abKey] = task;
             }
