@@ -1,7 +1,6 @@
 ﻿using System;
-using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
+using UnityEngine;
 
 namespace MingUnity.AssetBundles
 {

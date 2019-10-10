@@ -4,6 +4,42 @@
         <name>MingUnity_AssetBundles</name>
     </assembly>
     <members>
+        <member name="T:MingUnity.AssetBundles.DepAssetBundleLoader">
+            <summary>
+            AB包加载
+            自动加载依赖项
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.DepAssetBundleLoader._coreManifest">
+            <summary>
+            AB包总依赖清单
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.DepAssetBundleLoader._manifestLoaded">
+            <summary>
+            清单加载标识
+            </summary>
+        </member>
+        <member name="F:MingUnity.AssetBundles.DepAssetBundleLoader._coreManifestDir">
+            <summary>
+            清单目录
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.DepAssetBundleLoader.LoadDepAssetBundle(System.String)">
+            <summary>
+            加载依赖AB包
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.DepAssetBundleLoader.LoadDepAssetBundleAsync(System.String,System.Action,System.Action{System.Single})">
+            <summary>
+            异步加载依赖AB包
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.DepAssetBundleLoader.Average(System.Single[])">
+            <summary>
+            求平均数
+            </summary>
+        </member>
         <member name="T:MingUnity.AssetBundles.IAssetBundleLoader">
             <summary>
             AB包加载接口
@@ -143,6 +179,21 @@
         <member name="M:MingUnity.AssetBundles.AssetBundleLoader.GetAbKey(System.String)">
             <summary>
             获取AB包key值 
+            </summary>
+        </member>
+        <member name="T:MingUnity.AssetBundles.IDependencyLoader">
+            <summary>
+            依赖加载
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.IDependencyLoader.LoadManifestAssetBundle(System.String)">
+            <summary>
+            加载manifest
+            </summary>
+        </member>
+        <member name="M:MingUnity.AssetBundles.IDependencyLoader.LoadManifestAssetBundleAsync(System.String,System.Action,System.Action{System.Single})">
+            <summary>
+            异步加载manifest
             </summary>
         </member>
         <member name="P:MingUnity.AssetBundles.Task.Running">

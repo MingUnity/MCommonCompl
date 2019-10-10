@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\..\..\..\..\BG_TowerDefense\Project\BG_TowerDefense\Assets\Plugins\</OutputPath>
+    <OutputPath>..\..\..\..\Demo\AssetbundleDemo\Assets\Plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -50,9 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Core\DepAssetBundleLoader.cs" />
     <Compile Include="Src\Core\IAssetBundleLoader.cs" />
     <Compile Include="Src\Core\AssetBundleTask.cs" />
     <Compile Include="Src\Core\AssetBundleLoader.cs" />
+    <Compile Include="Src\Core\IDependencyLoader.cs" />
     <Compile Include="Src\Utility\TaskManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
