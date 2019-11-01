@@ -10,3 +10,6 @@ Code/Runtime/MingUnity_AssetBundleLoader/MingUnity_AssetBundleLoader/obj
 Demo/AssetbundleDemo/Library
 Demo/AssetbundleDemo/Temp
 Demo/AssetbundleDemo/.vs
+Demo/AssetbundleDemo/Assembly-CSharp.csproj
+Demo/AssetbundleDemo/AssetbundleDemo.CSharp.csproj
+Demo/AssetbundleDemo/AssetbundleDemo.sln
