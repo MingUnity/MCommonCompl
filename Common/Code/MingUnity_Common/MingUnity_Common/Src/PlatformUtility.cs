@@ -7,6 +7,48 @@ namespace MingUnity.Common
     /// </summary>
     public static class PlatformUtility
     {
+        private static MPlatform _platform;
+
+        /// <summary>
+        /// 当前平台
+        /// </summary>
+        public static MPlatform CurPlatform
+        {
+            get
+            {
+                return _platform;
+            }
+        }
+
+        /// <summary>
+        /// 初始化运行平台数据
+        /// </summary>
+        public static void InitPlatform()
+        {
+            switch (Application.platform)
+            {
+                case RuntimePlatform.WindowsEditor:
+                    _platform = MPlatform.Editor;
+                    break;
+
+                case RuntimePlatform.WindowsPlayer:
+                    _platform = MPlatform.Windows;
+                    break;
+
+                case RuntimePlatform.Android:
+                    _platform = MPlatform.Android;
+                    break;
+
+                case RuntimePlatform.IPhonePlayer:
+                    _platform = MPlatform.IOS;
+                    break;
+
+                default:
+                    _platform = MPlatform.UnKnown;
+                    break;
+            }
+        }
+
         /// <summary>
         /// 获取加载资源时streamingAssets路径
         /// </summary>
@@ -49,5 +91,33 @@ namespace MingUnity.Common
         {
             return $"file://{Application.persistentDataPath}";
         }
+    }
+
+    public enum MPlatform
+    {
+        /// <summary>
+        /// 未知
+        /// </summary>
+        UnKnown = 0,
+
+        /// <summary>
+        /// 编辑态
+        /// </summary>
+        Editor,
+
+        /// <summary>
+        /// windows
+        /// </summary>
+        Windows,
+
+        /// <summary>
+        /// 安卓
+        /// </summary>
+        Android,
+
+        /// <summary>
+        /// IOS
+        /// </summary>
+        IOS
     }
 }

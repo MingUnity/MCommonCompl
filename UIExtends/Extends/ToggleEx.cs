@@ -43,10 +43,42 @@ public class ToggleEx : Toggle
     [SerializeField]
     private Color _isOnTextColor = Color.white;
 
+    /// <summary>
+    /// 普通态事件
+    /// </summary>
+    [SerializeField]
     public UnityEvent onNormal = new UnityEvent();
+
+    /// <summary>
+    /// 高亮态事件
+    /// </summary>
+    [SerializeField]
     public UnityEvent onHighlighted = new UnityEvent();
+
+    /// <summary>
+    /// 点击态
+    /// </summary>
+    [SerializeField]
     public UnityEvent onPressed = new UnityEvent();
+
+    /// <summary>
+    /// 禁用态 
+    /// </summary>
+    [SerializeField]
     public UnityEvent onDisabled = new UnityEvent();
+    
+
+    /// <summary>
+    /// 进入悬浮态
+    /// </summary>
+    [SerializeField]
+    public UnityEvent onHoverEnter = new UnityEvent();
+
+    /// <summary>
+    /// 退出悬浮态
+    /// </summary>
+    [SerializeField]
+    public UnityEvent onHoverExit = new UnityEvent();
 
     protected override void Awake()
     {
@@ -118,6 +150,20 @@ public class ToggleEx : Toggle
                 _text.color = _normalTextColor;
             }
         }
+    }
+
+    public override void OnPointerEnter(PointerEventData eventData)
+    {
+        base.OnPointerEnter(eventData);
+
+        onHoverEnter?.Invoke();
+    }
+
+    public override void OnPointerExit(PointerEventData eventData)
+    {
+        base.OnPointerExit(eventData);
+
+        onHoverExit?.Invoke();
     }
 }
 

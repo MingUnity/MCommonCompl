@@ -19,6 +19,16 @@
             平台通用
             </summary>
         </member>
+        <member name="P:MingUnity.Common.PlatformUtility.CurPlatform">
+            <summary>
+            当前平台
+            </summary>
+        </member>
+        <member name="M:MingUnity.Common.PlatformUtility.InitPlatform">
+            <summary>
+            初始化运行平台数据
+            </summary>
+        </member>
         <member name="M:MingUnity.Common.PlatformUtility.GetResStreamingAssets(System.Boolean)">
             <summary>
             获取加载资源时streamingAssets路径
@@ -27,6 +37,31 @@
         <member name="M:MingUnity.Common.PlatformUtility.GetResPersistentDataPath">
             <summary>
             获取加载资源时persistentDataPath路径
+            </summary>
+        </member>
+        <member name="F:MingUnity.Common.MPlatform.UnKnown">
+            <summary>
+            未知
+            </summary>
+        </member>
+        <member name="F:MingUnity.Common.MPlatform.Editor">
+            <summary>
+            编辑态
+            </summary>
+        </member>
+        <member name="F:MingUnity.Common.MPlatform.Windows">
+            <summary>
+            windows
+            </summary>
+        </member>
+        <member name="F:MingUnity.Common.MPlatform.Android">
+            <summary>
+            安卓
+            </summary>
+        </member>
+        <member name="F:MingUnity.Common.MPlatform.IOS">
+            <summary>
+            IOS
             </summary>
         </member>
         <member name="T:MingUnity.Common.SerializeUtility">
