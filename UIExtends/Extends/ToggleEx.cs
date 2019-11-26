@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 /// <summary>
@@ -66,7 +67,7 @@ public class ToggleEx : Toggle
     /// </summary>
     [SerializeField]
     public UnityEvent onDisabled = new UnityEvent();
-    
+
 
     /// <summary>
     /// 进入悬浮态
