@@ -9,27 +9,27 @@
             UGUI按钮扩展
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ButtonEx._text">
+        <member name="F:UnityEngine.UI.ButtonEx.text">
             <summary>
             文本
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ButtonEx._normalTextColor">
+        <member name="F:UnityEngine.UI.ButtonEx.normalTextColor">
             <summary>
             普通态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ButtonEx._highlightedTextColor">
+        <member name="F:UnityEngine.UI.ButtonEx.highlightedTextColor">
             <summary>
             高亮态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ButtonEx._pressedTextColor">
+        <member name="F:UnityEngine.UI.ButtonEx.pressedTextColor">
             <summary>
             点击态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ButtonEx._disabledTextColor">
+        <member name="F:UnityEngine.UI.ButtonEx.disabledTextColor">
             <summary>
             禁用态 文本颜色
             </summary>
@@ -69,32 +69,32 @@
             Toggle扩展
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ToggleEx._text">
+        <member name="F:UnityEngine.UI.ToggleEx.text">
             <summary>
             文本
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ToggleEx._normalTextColor">
+        <member name="F:UnityEngine.UI.ToggleEx.normalTextColor">
             <summary>
             普通态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ToggleEx._highlightedTextColor">
+        <member name="F:UnityEngine.UI.ToggleEx.highlightedTextColor">
             <summary>
             悬浮态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ToggleEx._pressedTextColor">
+        <member name="F:UnityEngine.UI.ToggleEx.pressedTextColor">
             <summary>
             点击态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ToggleEx._disabledTextColor">
+        <member name="F:UnityEngine.UI.ToggleEx.disabledTextColor">
             <summary>
             禁用态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ToggleEx._isOnTextColor">
+        <member name="F:UnityEngine.UI.ToggleEx.isOnTextColor">
             <summary>
             选中态 文本颜色
             </summary>

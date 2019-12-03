@@ -18,7 +18,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\..\Output\UIExtends\Editor\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -40,23 +40,23 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="UnityEditor">
-      <HintPath>..\..\..\..\ThirdLib\Unity2018.4.1f1\UnityEditor.dll</HintPath>
+      <HintPath>..\..\..\ThirdLib\Unity2018.4.1f1\UnityEditor.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>..\..\..\..\ThirdLib\Unity2018.4.1f1\UnityEditor.UI.dll</HintPath>
+      <HintPath>..\..\..\ThirdLib\Unity2018.4.1f1\UnityEditor.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\ThirdLib\Unity2018.4.1f1\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\ThirdLib\Unity2018.4.1f1\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>..\..\..\..\ThirdLib\Unity2018.4.1f1\UnityEngine.UI.dll</HintPath>
+      <HintPath>..\..\..\ThirdLib\Unity2018.4.1f1\UnityEngine.UI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UI.Extends">
-      <HintPath>..\..\..\..\Output\UIExtends\UnityEngine.UI.Extends.dll</HintPath>
+      <HintPath>..\..\..\Output\UIExtends\UnityEngine.UI.Extends.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

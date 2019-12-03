@@ -11,74 +11,61 @@ namespace UnityEngine.UI
         /// <summary>
         /// 文本
         /// </summary>
-        [SerializeField]
-        private Text _text;
+        public Text text;
 
         /// <summary>
         /// 普通态 文本颜色
         /// </summary>
-        [SerializeField]
-        private Color _normalTextColor = Color.white;
+        public Color normalTextColor = Color.white;
 
         /// <summary>
         /// 悬浮态 文本颜色
         /// </summary>
-        [SerializeField]
-        private Color _highlightedTextColor = Color.white;
+        public Color highlightedTextColor = Color.white;
 
         /// <summary>
         /// 点击态 文本颜色
         /// </summary>
-        [SerializeField]
-        private Color _pressedTextColor = Color.white;
+        public Color pressedTextColor = Color.white;
 
         /// <summary>
         /// 禁用态 文本颜色
         /// </summary>
-        [SerializeField]
-        private Color _disabledTextColor = Color.white;
+        public Color disabledTextColor = Color.white;
 
         /// <summary>
         /// 选中态 文本颜色
         /// </summary>
-        [SerializeField]
-        private Color _isOnTextColor = Color.white;
+        public Color isOnTextColor = Color.white;
 
         /// <summary>
         /// 普通态事件
         /// </summary>
-        [SerializeField]
         public UnityEvent onNormal = new UnityEvent();
 
         /// <summary>
         /// 高亮态事件
         /// </summary>
-        [SerializeField]
         public UnityEvent onHighlighted = new UnityEvent();
 
         /// <summary>
         /// 点击态
         /// </summary>
-        [SerializeField]
         public UnityEvent onPressed = new UnityEvent();
 
         /// <summary>
         /// 禁用态 
         /// </summary>
-        [SerializeField]
         public UnityEvent onDisabled = new UnityEvent();
-
-
+        
         /// <summary>
         /// 进入悬浮态
         /// </summary>
-        [SerializeField]
         public UnityEvent onHoverEnter = new UnityEvent();
 
         /// <summary>
         /// 退出悬浮态
         /// </summary>
-        [SerializeField]
         public UnityEvent onHoverExit = new UnityEvent();
 
         protected override void Awake()
@@ -97,33 +84,33 @@ namespace UnityEngine.UI
                 switch (state)
                 {
                     case SelectionState.Normal:
-                        if (_text != null)
+                        if (text != null)
                         {
-                            _text.color = _normalTextColor;
+                            text.color = normalTextColor;
                         }
                         onNormal.Invoke();
                         break;
 
                     case SelectionState.Highlighted:
-                        if (_text != null)
+                        if (text != null)
                         {
-                            _text.color = _highlightedTextColor;
+                            text.color = highlightedTextColor;
                         }
                         onHighlighted.Invoke();
                         break;
 
                     case SelectionState.Pressed:
-                        if (_text != null)
+                        if (text != null)
                         {
-                            _text.color = _pressedTextColor;
+                            text.color = pressedTextColor;
                         }
                         onPressed.Invoke();
                         break;
 
                     case SelectionState.Disabled:
-                        if (_text != null)
+                        if (text != null)
                         {
-                            _text.color = _disabledTextColor;
+                            text.color = disabledTextColor;
                         }
                         onDisabled.Invoke();
                         break;
@@ -140,15 +127,15 @@ namespace UnityEngine.UI
 
         private void OnValueChanged(bool value)
         {
-            if (_text != null)
+            if (text != null)
             {
                 if (value)
                 {
-                    _text.color = _isOnTextColor;
+                    text.color = isOnTextColor;
                 }
                 else
                 {
-                    _text.color = _normalTextColor;
+                    text.color = normalTextColor;
                 }
             }
         }
@@ -167,6 +154,4 @@ namespace UnityEngine.UI
             onHoverExit?.Invoke();
         }
     }
-
-
 }
