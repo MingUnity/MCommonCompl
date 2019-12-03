@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnityEngine.UI.Extends</name>
+    </assembly>
+    <members>
+        <member name="T:UnityEngine.UI.ButtonEx">
+            <summary>
+            UGUI按钮扩展
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx._text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx._normalTextColor">
+            <summary>
+            普通态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx._highlightedTextColor">
+            <summary>
+            高亮态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx._pressedTextColor">
+            <summary>
+            点击态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx._disabledTextColor">
+            <summary>
+            禁用态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onNormal">
+            <summary>
+            普通态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onHighlighted">
+            <summary>
+            高亮态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onPressed">
+            <summary>
+            点击态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onDisabled">
+            <summary>
+            禁用态 
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onHoverEnter">
+            <summary>
+            进入悬浮态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onHoverExit">
+            <summary>
+            退出悬浮态
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.ToggleEx">
+            <summary>
+            Toggle扩展
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx._text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx._normalTextColor">
+            <summary>
+            普通态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx._highlightedTextColor">
+            <summary>
+            悬浮态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx._pressedTextColor">
+            <summary>
+            点击态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx._disabledTextColor">
+            <summary>
+            禁用态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx._isOnTextColor">
+            <summary>
+            选中态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onNormal">
+            <summary>
+            普通态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onHighlighted">
+            <summary>
+            高亮态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onPressed">
+            <summary>
+            点击态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onDisabled">
+            <summary>
+            禁用态 
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onHoverEnter">
+            <summary>
+            进入悬浮态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onHoverExit">
+            <summary>
+            退出悬浮态
+            </summary>
+        </member>
+    </members>
+</doc>
