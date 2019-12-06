@@ -44,7 +44,7 @@ namespace UnityEditor.UI
 
             if (_src.text != null)
             {
-                if (!_src.isOn)
+                if (!_src.isOn && _src.interactable)
                 {
                     _src.normalTextColor = _src.text.color;
                 }
@@ -54,9 +54,14 @@ namespace UnityEditor.UI
                 _src.disabledTextColor = EditorGUILayout.ColorField("DisabledTextColor", _src.disabledTextColor);
                 _src.isOnTextColor = EditorGUILayout.ColorField("IsOnTextColor", _src.isOnTextColor);
 
-                if (_src.isOn)
+                if (_src.isOn && _src.interactable)
                 {
                     _src.text.color = _src.isOnTextColor;
+                }
+
+                if (!_src.interactable)
+                {
+                    _src.text.color = _src.disabledTextColor;
                 }
             }
 

@@ -44,10 +44,19 @@ public class ButtonExEditor : ButtonEditor
 
         if (_src.text != null)
         {
-            _src.normalTextColor = _src.text.color;
+            if (_src.interactable)
+            {
+                _src.normalTextColor = _src.text.color;
+            }
+
             _src.highlightedTextColor = EditorGUILayout.ColorField("HighlightedTextColor", _src.highlightedTextColor);
             _src.pressedTextColor = EditorGUILayout.ColorField("PressedTextColor", _src.pressedTextColor);
             _src.disabledTextColor = EditorGUILayout.ColorField("DisabledTextColor", _src.disabledTextColor);
+
+            if (!_src.interactable)
+            {
+                _src.text.color = _src.disabledTextColor;
+            }
         }
 
         EditorGUILayout.Space();
