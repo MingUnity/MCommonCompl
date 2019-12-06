@@ -26,11 +26,11 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\Output\UIExtends\Editor\</OutputPath>
+    <OutputPath>..\..\..\Output\UIExtends\Editor\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>..\..\..\..\Output\UIExtends\Editor\UnityEditor.UI.Extends.xml</DocumentationFile>
+    <DocumentationFile>..\..\..\Output\UIExtends\Editor\UnityEditor.UI.Extends.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
