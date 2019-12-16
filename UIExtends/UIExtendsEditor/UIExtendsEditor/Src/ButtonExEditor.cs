@@ -1,17 +1,11 @@
 ﻿using UnityEditor;
 using UnityEditor.UI;
-using UnityEngine;
 using UnityEngine.UI;
 
 [CanEditMultipleObjects]
 [CustomEditor(typeof(ButtonEx), true)]
 public class ButtonExEditor : ButtonEditor
 {
-    private SerializedProperty _text;
-    private SerializedProperty _clrNormal;
-    private SerializedProperty _clrHighlighted;
-    private SerializedProperty _clrPressed;
-    private SerializedProperty _clrDisabled;
     private SerializedProperty _onNormal;
     private SerializedProperty _onHighlighted;
     private SerializedProperty _onPressed;
@@ -19,43 +13,50 @@ public class ButtonExEditor : ButtonEditor
     private SerializedProperty _onHoverEnter;
     private SerializedProperty _onHoverExit;
 
+    private ButtonEx _src;
+
     protected override void OnEnable()
     {
         base.OnEnable();
 
-        _text = serializedObject.FindProperty("_text");
-        _clrNormal = serializedObject.FindProperty("_normalTextColor");
-        _clrHighlighted = serializedObject.FindProperty("_highlightedTextColor");
-        _clrPressed = serializedObject.FindProperty("_pressedTextColor");
-        _clrDisabled = serializedObject.FindProperty("_disabledTextColor");
         _onNormal = serializedObject.FindProperty("onNormal");
         _onHighlighted = serializedObject.FindProperty("onHighlighted");
         _onPressed = serializedObject.FindProperty("onPressed");
         _onDisabled = serializedObject.FindProperty("onDisabled");
         _onHoverEnter = serializedObject.FindProperty("onHoverEnter");
         _onHoverExit = serializedObject.FindProperty("onHoverExit");
+
+        _src = target as ButtonEx;
     }
 
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
+        if (_src == null)
+        {
+            return;
+        }
+
         EditorGUILayout.Space();
 
-        EditorGUILayout.PropertyField(_text);
+        _src.text = EditorGUILayout.ObjectField("Text", _src.text, typeof(Text), true) as Text;
 
-        if (_text.objectReferenceValue != null)
+        if (_src.text != null)
         {
-            if (!Application.isPlaying)
+            if (_src.interactable)
             {
-                Text text = _text.objectReferenceValue as Text;
-
-                _clrNormal.colorValue = text.color;
+                _src.normalTextColor = _src.text.color;
             }
-            
-            EditorGUILayout.PropertyField(_clrHighlighted);
-            EditorGUILayout.PropertyField(_clrPressed);
-            EditorGUILayout.PropertyField(_clrDisabled);
+
+            _src.highlightedTextColor = EditorGUILayout.ColorField("HighlightedTextColor", _src.highlightedTextColor);
+            _src.pressedTextColor = EditorGUILayout.ColorField("PressedTextColor", _src.pressedTextColor);
+            _src.disabledTextColor = EditorGUILayout.ColorField("DisabledTextColor", _src.disabledTextColor);
+
+            if (!_src.interactable)
+            {
+                _src.text.color = _src.disabledTextColor;
+            }
         }
 
         EditorGUILayout.Space();
@@ -64,9 +65,6 @@ public class ButtonExEditor : ButtonEditor
         EditorGUILayout.PropertyField(_onHighlighted);
         EditorGUILayout.PropertyField(_onPressed);
         EditorGUILayout.PropertyField(_onDisabled);
-
-        EditorGUILayout.Space();
-
         EditorGUILayout.PropertyField(_onHoverEnter);
         EditorGUILayout.PropertyField(_onHoverExit);
 

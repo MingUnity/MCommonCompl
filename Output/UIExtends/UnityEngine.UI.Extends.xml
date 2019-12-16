@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UnityEngine.UI.Extends</name>
+    </assembly>
+    <members>
+        <member name="T:UnityEngine.UI.ButtonEx">
+            <summary>
+            UGUI按钮扩展
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.normalTextColor">
+            <summary>
+            普通态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.highlightedTextColor">
+            <summary>
+            高亮态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.pressedTextColor">
+            <summary>
+            点击态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.disabledTextColor">
+            <summary>
+            禁用态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onNormal">
+            <summary>
+            普通态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onHighlighted">
+            <summary>
+            高亮态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onPressed">
+            <summary>
+            点击态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onDisabled">
+            <summary>
+            禁用态 
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onHoverEnter">
+            <summary>
+            进入悬浮态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ButtonEx.onHoverExit">
+            <summary>
+            退出悬浮态
+            </summary>
+        </member>
+        <member name="T:UnityEngine.UI.ToggleEx">
+            <summary>
+            Toggle扩展
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.text">
+            <summary>
+            文本
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.normalTextColor">
+            <summary>
+            普通态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.highlightedTextColor">
+            <summary>
+            悬浮态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.pressedTextColor">
+            <summary>
+            点击态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.disabledTextColor">
+            <summary>
+            禁用态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.isOnTextColor">
+            <summary>
+            选中态 文本颜色
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onNormal">
+            <summary>
+            普通态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onHighlighted">
+            <summary>
+            高亮态事件
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onPressed">
+            <summary>
+            点击态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onDisabled">
+            <summary>
+            禁用态 
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onHoverEnter">
+            <summary>
+            进入悬浮态
+            </summary>
+        </member>
+        <member name="F:UnityEngine.UI.ToggleEx.onHoverExit">
+            <summary>
+            退出悬浮态
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect.direction">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect.topColor">
+            <summary>
+            顶部颜色
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect.bottomColor">
+            <summary>
+            底部颜色
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect._cacheVertexList">
+            <summary>
+            顶点缓存列表
+            </summary>
+        </member>
+        <member name="M:GradientMeshEffect.Distance(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            求距离
+            </summary>
+        </member>
+        <member name="T:GradientMeshEffect.Direction">
+            <summary>
+            方向
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect.Direction.BottomToTop">
+            <summary>
+            底->顶
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect.Direction.LeftToRight">
+            <summary>
+            左->右
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect.Direction.RightBottomToLeftTop">
+            <summary>
+            右下->左上
+            </summary>
+        </member>
+        <member name="F:GradientMeshEffect.Direction.LeftBottomToRightTop">
+            <summary>
+            左下->右上
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIExtends", "UIExtends\UIExtends.csproj", "{6AD77877-85A6-48AC-8EBE-7369CF641675}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AD77877-85A6-48AC-8EBE-7369CF641675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD77877-85A6-48AC-8EBE-7369CF641675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD77877-85A6-48AC-8EBE-7369CF641675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD77877-85A6-48AC-8EBE-7369CF641675}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DBAC0CF4-A98A-4002-926B-62FBEA581882}
+	EndGlobalSection
+EndGlobal
