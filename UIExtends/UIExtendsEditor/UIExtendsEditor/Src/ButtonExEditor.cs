@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEditor.UI;
+using UnityEngine;
 using UnityEngine.UI;
 
 [CanEditMultipleObjects]
@@ -33,7 +34,7 @@ public class ButtonExEditor : ButtonEditor
     {
         base.OnInspectorGUI();
 
-        if (_src == null)
+        if (_src == null || Application.isPlaying)
         {
             return;
         }

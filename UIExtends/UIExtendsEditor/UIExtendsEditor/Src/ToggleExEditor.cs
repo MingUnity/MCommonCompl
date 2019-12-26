@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace UnityEditor.UI
 {
@@ -33,7 +34,7 @@ namespace UnityEditor.UI
         {
             base.OnInspectorGUI();
 
-            if (_src == null)
+            if (_src == null || Application.isPlaying)
             {
                 return;
             }

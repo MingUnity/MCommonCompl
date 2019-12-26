@@ -57,7 +57,7 @@ namespace UnityEngine.UI
         /// 禁用态 
         /// </summary>
         public UnityEvent onDisabled = new UnityEvent();
-        
+
         /// <summary>
         /// 进入悬浮态
         /// </summary>
@@ -67,12 +67,21 @@ namespace UnityEngine.UI
         /// 退出悬浮态
         /// </summary>
         public UnityEvent onHoverExit = new UnityEvent();
-
-        protected override void Awake()
+        
+        protected override void OnEnable()
         {
-            base.Awake();
+            base.OnEnable();
+
+            OnValueChanged(isOn);
 
             onValueChanged.AddListener(OnValueChanged);
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+
+            onValueChanged.RemoveListener(OnValueChanged);
         }
 
         protected override void DoStateTransition(SelectionState state, bool instant)

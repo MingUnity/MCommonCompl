@@ -73,7 +73,6 @@ namespace UnityEngine.UI
                     if (text != null)
                     {
                         text.color = normalTextColor;
-
                     }
                     onNormal.Invoke();
                     break;
@@ -118,5 +117,4 @@ namespace UnityEngine.UI
             onHoverExit?.Invoke();
         }
     }
-
 }
