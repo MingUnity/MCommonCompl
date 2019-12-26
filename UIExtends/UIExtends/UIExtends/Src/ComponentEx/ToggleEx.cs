@@ -57,7 +57,7 @@ namespace UnityEngine.UI
         /// 禁用态 
         /// </summary>
         public UnityEvent onDisabled = new UnityEvent();
-        
+
         /// <summary>
         /// 进入悬浮态
         /// </summary>
@@ -68,11 +68,30 @@ namespace UnityEngine.UI
         /// </summary>
         public UnityEvent onHoverExit = new UnityEvent();
 
+        /// <summary>
+        /// 是否为普通态
+        /// </summary>
+        public bool IsNormal { get; set; }
+
         protected override void Awake()
         {
             base.Awake();
 
             onValueChanged.AddListener(OnValueChanged);
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+
+            OnValueChanged(isOn);
+        }
+
+        protected override void OnDisable()
+        {
+            base.OnDisable();
+
+            OnValueChanged(false);
         }
 
         protected override void DoStateTransition(SelectionState state, bool instant)
@@ -116,6 +135,8 @@ namespace UnityEngine.UI
                         break;
                 }
             }
+
+            IsNormal = !isOn && state == SelectionState.Normal;
         }
 
         protected override void OnDestroy()

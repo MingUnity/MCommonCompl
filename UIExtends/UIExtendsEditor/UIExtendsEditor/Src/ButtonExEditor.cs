@@ -44,7 +44,7 @@ public class ButtonExEditor : ButtonEditor
 
         if (_src.text != null)
         {
-            if (_src.interactable)
+            if (_src.interactable && _src.IsNormal)
             {
                 _src.normalTextColor = _src.text.color;
             }

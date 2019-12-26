@@ -64,6 +64,11 @@
             退出悬浮态
             </summary>
         </member>
+        <member name="P:UnityEngine.UI.ButtonEx.IsNormal">
+            <summary>
+            是否为普通态
+            </summary>
+        </member>
         <member name="T:UnityEngine.UI.ToggleEx">
             <summary>
             Toggle扩展
@@ -127,6 +132,11 @@
         <member name="F:UnityEngine.UI.ToggleEx.onHoverExit">
             <summary>
             退出悬浮态
+            </summary>
+        </member>
+        <member name="P:UnityEngine.UI.ToggleEx.IsNormal">
+            <summary>
+            是否为普通态
             </summary>
         </member>
         <member name="F:GradientMeshEffect.direction">

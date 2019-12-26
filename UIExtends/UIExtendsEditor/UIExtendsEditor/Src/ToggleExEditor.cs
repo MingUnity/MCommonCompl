@@ -44,7 +44,7 @@ namespace UnityEditor.UI
 
             if (_src.text != null)
             {
-                if (!_src.isOn && _src.interactable)
+                if (!_src.isOn && _src.interactable && _src.IsNormal)
                 {
                     _src.normalTextColor = _src.text.color;
                 }
