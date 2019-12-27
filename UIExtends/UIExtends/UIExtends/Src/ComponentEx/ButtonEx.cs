@@ -63,11 +63,6 @@ namespace UnityEngine.UI
         /// </summary>
         public UnityEvent onHoverExit = new UnityEvent();
 
-        /// <summary>
-        /// 是否为普通态
-        /// </summary>
-        public bool IsNormal { get; set; }
-
         protected override void DoStateTransition(SelectionState state, bool instant)
         {
             base.DoStateTransition(state, instant);
@@ -106,8 +101,6 @@ namespace UnityEngine.UI
                     onDisabled.Invoke();
                     break;
             }
-
-            IsNormal = state == SelectionState.Normal;
         }
 
         public override void OnPointerEnter(PointerEventData eventData)

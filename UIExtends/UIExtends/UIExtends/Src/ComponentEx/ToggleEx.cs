@@ -67,31 +67,21 @@ namespace UnityEngine.UI
         /// 退出悬浮态
         /// </summary>
         public UnityEvent onHoverExit = new UnityEvent();
-
-        /// <summary>
-        /// 是否为普通态
-        /// </summary>
-        public bool IsNormal { get; set; }
-
-        protected override void Awake()
-        {
-            base.Awake();
-
-            onValueChanged.AddListener(OnValueChanged);
-        }
-
+        
         protected override void OnEnable()
         {
             base.OnEnable();
 
             OnValueChanged(isOn);
+
+            onValueChanged.AddListener(OnValueChanged);
         }
 
         protected override void OnDisable()
         {
             base.OnDisable();
 
-            OnValueChanged(false);
+            onValueChanged.RemoveListener(OnValueChanged);
         }
 
         protected override void DoStateTransition(SelectionState state, bool instant)
@@ -135,8 +125,6 @@ namespace UnityEngine.UI
                         break;
                 }
             }
-
-            IsNormal = !isOn && state == SelectionState.Normal;
         }
 
         protected override void OnDestroy()

@@ -1,5 +1,6 @@
 ﻿using UnityEditor;
 using UnityEditor.UI;
+using UnityEngine;
 using UnityEngine.UI;
 
 [CanEditMultipleObjects]
@@ -33,7 +34,7 @@ public class ButtonExEditor : ButtonEditor
     {
         base.OnInspectorGUI();
 
-        if (_src == null)
+        if (_src == null || Application.isPlaying)
         {
             return;
         }
@@ -44,7 +45,7 @@ public class ButtonExEditor : ButtonEditor
 
         if (_src.text != null)
         {
-            if (_src.interactable && _src.IsNormal)
+            if (_src.interactable)
             {
                 _src.normalTextColor = _src.text.color;
             }

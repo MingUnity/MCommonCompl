@@ -1,4 +1,5 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace UnityEditor.UI
 {
@@ -33,7 +34,7 @@ namespace UnityEditor.UI
         {
             base.OnInspectorGUI();
 
-            if (_src == null)
+            if (_src == null || Application.isPlaying)
             {
                 return;
             }
@@ -44,7 +45,7 @@ namespace UnityEditor.UI
 
             if (_src.text != null)
             {
-                if (!_src.isOn && _src.interactable && _src.IsNormal)
+                if (!_src.isOn && _src.interactable)
                 {
                     _src.normalTextColor = _src.text.color;
                 }
