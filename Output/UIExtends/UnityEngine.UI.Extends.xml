@@ -34,36 +34,6 @@
             禁用态 文本颜色
             </summary>
         </member>
-        <member name="F:UnityEngine.UI.ButtonEx.onNormal">
-            <summary>
-            普通态事件
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ButtonEx.onHighlighted">
-            <summary>
-            高亮态事件
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ButtonEx.onPressed">
-            <summary>
-            点击态
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ButtonEx.onDisabled">
-            <summary>
-            禁用态 
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ButtonEx.onHoverEnter">
-            <summary>
-            进入悬浮态
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ButtonEx.onHoverExit">
-            <summary>
-            退出悬浮态
-            </summary>
-        </member>
         <member name="T:UnityEngine.UI.ToggleEx">
             <summary>
             Toggle扩展
@@ -97,36 +67,6 @@
         <member name="F:UnityEngine.UI.ToggleEx.isOnTextColor">
             <summary>
             选中态 文本颜色
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ToggleEx.onNormal">
-            <summary>
-            普通态事件
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ToggleEx.onHighlighted">
-            <summary>
-            高亮态事件
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ToggleEx.onPressed">
-            <summary>
-            点击态
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ToggleEx.onDisabled">
-            <summary>
-            禁用态 
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ToggleEx.onHoverEnter">
-            <summary>
-            进入悬浮态
-            </summary>
-        </member>
-        <member name="F:UnityEngine.UI.ToggleEx.onHoverExit">
-            <summary>
-            退出悬浮态
             </summary>
         </member>
     </members>

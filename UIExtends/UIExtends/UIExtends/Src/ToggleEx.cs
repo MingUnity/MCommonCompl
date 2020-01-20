@@ -37,36 +37,6 @@ namespace UnityEngine.UI
         /// 选中态 文本颜色
         /// </summary>
         public Color isOnTextColor = Color.white;
-
-        /// <summary>
-        /// 普通态事件
-        /// </summary>
-        public UnityEvent onNormal = new UnityEvent();
-
-        /// <summary>
-        /// 高亮态事件
-        /// </summary>
-        public UnityEvent onHighlighted = new UnityEvent();
-
-        /// <summary>
-        /// 点击态
-        /// </summary>
-        public UnityEvent onPressed = new UnityEvent();
-
-        /// <summary>
-        /// 禁用态 
-        /// </summary>
-        public UnityEvent onDisabled = new UnityEvent();
-
-        /// <summary>
-        /// 进入悬浮态
-        /// </summary>
-        public UnityEvent onHoverEnter = new UnityEvent();
-
-        /// <summary>
-        /// 退出悬浮态
-        /// </summary>
-        public UnityEvent onHoverExit = new UnityEvent();
         
         protected override void OnEnable()
         {
@@ -97,7 +67,6 @@ namespace UnityEngine.UI
                         {
                             text.color = normalTextColor;
                         }
-                        onNormal.Invoke();
                         break;
 
                     case SelectionState.Highlighted:
@@ -105,7 +74,6 @@ namespace UnityEngine.UI
                         {
                             text.color = highlightedTextColor;
                         }
-                        onHighlighted.Invoke();
                         break;
 
                     case SelectionState.Pressed:
@@ -113,7 +81,6 @@ namespace UnityEngine.UI
                         {
                             text.color = pressedTextColor;
                         }
-                        onPressed.Invoke();
                         break;
 
                     case SelectionState.Disabled:
@@ -121,7 +88,6 @@ namespace UnityEngine.UI
                         {
                             text.color = disabledTextColor;
                         }
-                        onDisabled.Invoke();
                         break;
                 }
             }
@@ -147,20 +113,6 @@ namespace UnityEngine.UI
                     text.color = normalTextColor;
                 }
             }
-        }
-
-        public override void OnPointerEnter(PointerEventData eventData)
-        {
-            base.OnPointerEnter(eventData);
-
-            onHoverEnter?.Invoke();
-        }
-
-        public override void OnPointerExit(PointerEventData eventData)
-        {
-            base.OnPointerExit(eventData);
-
-            onHoverExit?.Invoke();
         }
     }
 }
